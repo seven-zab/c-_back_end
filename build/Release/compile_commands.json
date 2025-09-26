@@ -1,0 +1,44 @@
+[
+{
+  "directory": "/home/zab_seven/week1/day2/build/Release",
+  "command": "/usr/bin/c++  -I/home/zab_seven/week1/day2/include -O2 -DNDEBUG -std=c++17 -o CMakeFiles/mycore.dir/src/file_guard.cpp.o -c /home/zab_seven/week1/day2/src/file_guard.cpp",
+  "file": "/home/zab_seven/week1/day2/src/file_guard.cpp",
+  "output": "CMakeFiles/mycore.dir/src/file_guard.cpp.o"
+},
+{
+  "directory": "/home/zab_seven/week1/day2/build/Release",
+  "command": "/usr/bin/c++  -I/home/zab_seven/week1/day2/include -O2 -DNDEBUG -std=c++17 -o CMakeFiles/mycore.dir/src/mutex_guard.cpp.o -c /home/zab_seven/week1/day2/src/mutex_guard.cpp",
+  "file": "/home/zab_seven/week1/day2/src/mutex_guard.cpp",
+  "output": "CMakeFiles/mycore.dir/src/mutex_guard.cpp.o"
+},
+{
+  "directory": "/home/zab_seven/week1/day2/build/Release",
+  "command": "/usr/bin/c++  -I/home/zab_seven/week1/day2/include -O2 -DNDEBUG -std=c++17 -o CMakeFiles/mycore.dir/src/buffer.cpp.o -c /home/zab_seven/week1/day2/src/buffer.cpp",
+  "file": "/home/zab_seven/week1/day2/src/buffer.cpp",
+  "output": "CMakeFiles/mycore.dir/src/buffer.cpp.o"
+},
+{
+  "directory": "/home/zab_seven/week1/day2/build/Release",
+  "command": "/usr/bin/c++  -I/home/zab_seven/week1/day2/include -O2 -DNDEBUG -std=c++17 -o CMakeFiles/mycore.dir/src/node.cpp.o -c /home/zab_seven/week1/day2/src/node.cpp",
+  "file": "/home/zab_seven/week1/day2/src/node.cpp",
+  "output": "CMakeFiles/mycore.dir/src/node.cpp.o"
+},
+{
+  "directory": "/home/zab_seven/week1/day2/build/Release",
+  "command": "/usr/bin/c++  -I/home/zab_seven/week1/day2/include -O2 -DNDEBUG -std=c++17 -o CMakeFiles/demo_raii.dir/app/demo_raii.cpp.o -c /home/zab_seven/week1/day2/app/demo_raii.cpp",
+  "file": "/home/zab_seven/week1/day2/app/demo_raii.cpp",
+  "output": "CMakeFiles/demo_raii.dir/app/demo_raii.cpp.o"
+},
+{
+  "directory": "/home/zab_seven/week1/day2/build/Release",
+  "command": "/usr/bin/c++  -I/home/zab_seven/week1/day2/include -O2 -DNDEBUG -std=c++17 -o CMakeFiles/demo_buffer.dir/app/demo_buffer.cpp.o -c /home/zab_seven/week1/day2/app/demo_buffer.cpp",
+  "file": "/home/zab_seven/week1/day2/app/demo_buffer.cpp",
+  "output": "CMakeFiles/demo_buffer.dir/app/demo_buffer.cpp.o"
+},
+{
+  "directory": "/home/zab_seven/week1/day2/build/Release",
+  "command": "/usr/bin/c++  -I/home/zab_seven/week1/day2/include -O2 -DNDEBUG -std=c++17 -o CMakeFiles/demo_ownership.dir/app/demo_ownership.cpp.o -c /home/zab_seven/week1/day2/app/demo_ownership.cpp",
+  "file": "/home/zab_seven/week1/day2/app/demo_ownership.cpp",
+  "output": "CMakeFiles/demo_ownership.dir/app/demo_ownership.cpp.o"
+}
+]

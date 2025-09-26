@@ -1,0 +1,11 @@
+/home/zab_seven/week1/day3/build/Debug/CMakeFiles/edit_cache.dir
+/home/zab_seven/week1/day3/build/Debug/CMakeFiles/rebuild_cache.dir
+/home/zab_seven/week1/day3/build/Debug/src/CMakeFiles/mycore.dir
+/home/zab_seven/week1/day3/build/Debug/src/CMakeFiles/edit_cache.dir
+/home/zab_seven/week1/day3/build/Debug/src/CMakeFiles/rebuild_cache.dir
+/home/zab_seven/week1/day3/build/Debug/app/CMakeFiles/demo_raii.dir
+/home/zab_seven/week1/day3/build/Debug/app/CMakeFiles/edit_cache.dir
+/home/zab_seven/week1/day3/build/Debug/app/CMakeFiles/rebuild_cache.dir
+/home/zab_seven/week1/day3/build/Debug/tests/CMakeFiles/tests.dir
+/home/zab_seven/week1/day3/build/Debug/tests/CMakeFiles/edit_cache.dir
+/home/zab_seven/week1/day3/build/Debug/tests/CMakeFiles/rebuild_cache.dir

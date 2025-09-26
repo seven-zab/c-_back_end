@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/demo_raii.dir/demo_raii.cpp.o -o demo_raii  ../src/libmycore.a 

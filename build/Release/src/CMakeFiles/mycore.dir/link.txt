@@ -1,0 +1,2 @@
+/usr/bin/ar qc libmycore.a CMakeFiles/mycore.dir/file_guard.cpp.o CMakeFiles/mycore.dir/line_reader.cpp.o
+/usr/bin/ranlib libmycore.a

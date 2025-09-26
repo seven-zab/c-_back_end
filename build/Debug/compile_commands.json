@@ -1,0 +1,26 @@
+[
+{
+  "directory": "/home/zab_seven/week1/day3/build/Debug/src",
+  "command": "/usr/bin/c++  -I/home/zab_seven/week1/day3/include -g -Wall -Wextra -Wpedantic -g -Og -o CMakeFiles/mycore.dir/file_guard.cpp.o -c /home/zab_seven/week1/day3/src/file_guard.cpp",
+  "file": "/home/zab_seven/week1/day3/src/file_guard.cpp",
+  "output": "src/CMakeFiles/mycore.dir/file_guard.cpp.o"
+},
+{
+  "directory": "/home/zab_seven/week1/day3/build/Debug/src",
+  "command": "/usr/bin/c++  -I/home/zab_seven/week1/day3/include -g -Wall -Wextra -Wpedantic -g -Og -o CMakeFiles/mycore.dir/line_reader.cpp.o -c /home/zab_seven/week1/day3/src/line_reader.cpp",
+  "file": "/home/zab_seven/week1/day3/src/line_reader.cpp",
+  "output": "src/CMakeFiles/mycore.dir/line_reader.cpp.o"
+},
+{
+  "directory": "/home/zab_seven/week1/day3/build/Debug/app",
+  "command": "/usr/bin/c++  -I/home/zab_seven/week1/day3/include -g -g -Og -o CMakeFiles/demo_raii.dir/demo_raii.cpp.o -c /home/zab_seven/week1/day3/app/demo_raii.cpp",
+  "file": "/home/zab_seven/week1/day3/app/demo_raii.cpp",
+  "output": "app/CMakeFiles/demo_raii.dir/demo_raii.cpp.o"
+},
+{
+  "directory": "/home/zab_seven/week1/day3/build/Debug/tests",
+  "command": "/usr/bin/c++  -I/home/zab_seven/week1/day3/include -g -g -Og -o CMakeFiles/tests.dir/test_line_reader.cpp.o -c /home/zab_seven/week1/day3/tests/test_line_reader.cpp",
+  "file": "/home/zab_seven/week1/day3/tests/test_line_reader.cpp",
+  "output": "tests/CMakeFiles/tests.dir/test_line_reader.cpp.o"
+}
+]

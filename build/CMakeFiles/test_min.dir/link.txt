@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/test_min.dir/tests/test_min.cpp.o -o bin/test_min  libbuggy.a 

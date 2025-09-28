@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/day4_main.dir/src/main.cpp.o -o bin/day4_main  libbuggy.a 

@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/app.dir/src/main.cpp.o -o app  libmycore.a 

@@ -1,0 +1,2 @@
+/usr/bin/ar qc libmycore.a CMakeFiles/mycore.dir/src/mem_issues_bad.cpp.o CMakeFiles/mycore.dir/src/mem_issues_fix.cpp.o
+/usr/bin/ranlib libmycore.a

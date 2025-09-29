@@ -1,0 +1,1 @@
+/usr/bin/c++ -O2 -DNDEBUG CMakeFiles/demo_raii.dir/app/demo_raii.cpp.o -o demo_raii  libmycore.a 

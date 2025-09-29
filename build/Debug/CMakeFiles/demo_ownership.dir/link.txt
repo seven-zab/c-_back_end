@@ -1,0 +1,1 @@
+/usr/bin/c++ -g -Og -Wall -Wextra CMakeFiles/demo_ownership.dir/app/demo_ownership.cpp.o -o demo_ownership  libmycore.a 

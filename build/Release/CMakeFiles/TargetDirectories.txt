@@ -1,0 +1,6 @@
+/home/zab_seven/week1/day2/build/Release/CMakeFiles/mycore.dir
+/home/zab_seven/week1/day2/build/Release/CMakeFiles/demo_raii.dir
+/home/zab_seven/week1/day2/build/Release/CMakeFiles/demo_buffer.dir
+/home/zab_seven/week1/day2/build/Release/CMakeFiles/demo_ownership.dir
+/home/zab_seven/week1/day2/build/Release/CMakeFiles/edit_cache.dir
+/home/zab_seven/week1/day2/build/Release/CMakeFiles/rebuild_cache.dir

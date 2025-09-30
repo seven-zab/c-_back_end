@@ -1,0 +1,4 @@
+/mnt/e/c++_backdown_learn/day6/build/RelWithDebInfo/CMakeFiles/mycore.dir
+/mnt/e/c++_backdown_learn/day6/build/RelWithDebInfo/CMakeFiles/demo_perf.dir
+/mnt/e/c++_backdown_learn/day6/build/RelWithDebInfo/CMakeFiles/edit_cache.dir
+/mnt/e/c++_backdown_learn/day6/build/RelWithDebInfo/CMakeFiles/rebuild_cache.dir

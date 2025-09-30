@@ -1,0 +1,14 @@
+[
+{
+  "directory": "/mnt/e/c++_backdown_learn/day6/build/RelWithDebInfo",
+  "command": "/usr/bin/c++  -I/mnt/e/c++_backdown_learn/day6/include -O2 -g -o CMakeFiles/mycore.dir/src/hotspots.cpp.o -c /mnt/e/c++_backdown_learn/day6/src/hotspots.cpp",
+  "file": "/mnt/e/c++_backdown_learn/day6/src/hotspots.cpp",
+  "output": "CMakeFiles/mycore.dir/src/hotspots.cpp.o"
+},
+{
+  "directory": "/mnt/e/c++_backdown_learn/day6/build/RelWithDebInfo",
+  "command": "/usr/bin/c++  -I/mnt/e/c++_backdown_learn/day6/include -O2 -g -o CMakeFiles/demo_perf.dir/app/demo_perf.cpp.o -c /mnt/e/c++_backdown_learn/day6/app/demo_perf.cpp",
+  "file": "/mnt/e/c++_backdown_learn/day6/app/demo_perf.cpp",
+  "output": "CMakeFiles/demo_perf.dir/app/demo_perf.cpp.o"
+}
+]

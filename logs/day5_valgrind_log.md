@@ -101,7 +101,7 @@ Safe read value: 42
 ```
 valgrind ./build/Debug/demo_mem oob
 ```
-现象（节选）：
+现象：
 ```
 ==1905== Memcheck, a memory error detector
 ==1905== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
@@ -139,6 +139,8 @@ valgrind ./build/Debug/demo_mem oob
 ```
 valgrind ./build/Debug/demo_mem_fixed
 ```
+
+```
 ==1910== Memcheck, a memory error detector
 ==1910== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
 ==1910== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
@@ -160,6 +162,7 @@ Safe read value: 42
 ==1910==
 ==1910== For lists of detected and suppressed errors, rerun with: -s
 ==1910== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+```
 
 ---
 
@@ -173,7 +176,7 @@ Safe read value: 42
 valgrind ./build/Debug/demo_mem uaf
 
 ```
-现象（节选）：
+现象：
 ```
 ==1911== Memcheck, a memory error detector
 ==1911== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
@@ -217,6 +220,7 @@ Use-after-free read value: 42
 valgrind ./build/Debug/demo_mem_fixed
 
 ```
+```
 ==1912== Memcheck, a memory error detector
 ==1912== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
 ==1912== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
@@ -238,6 +242,7 @@ Safe read value: 42
 ==1912==
 ==1912== For lists of detected and suppressed errors, rerun with: -s
 ==1912== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+```
 
 ---
 
@@ -249,7 +254,10 @@ Safe read value: 42
 - 问题类型与触发条件：手工 `new/delete` 失误引起泄漏，错误边界条件导致 OOB，生命周期管理不当导致 UAF。
 - 定位手段与关键线索：Memcheck 的 `Invalid write/read` 报告与 `definitely lost` 指标，结合文件与行号精确定位。
 - 修复方式与注意事项：优先 RAII/标准容器；避免裸指针所有权；调试构建使用 `-g -Og`，发布使用 `-O2`。
-- 后续改进：将 `demo_mem` 纳入 CI 的 Valgrind 步骤；为关键模块增加单元测试覆盖与边界检查。\n## 环境与版本
+- 后续改进：将 `demo_mem` 纳入 CI 的 Valgrind 步骤；为关键模块增加单元测试覆盖与边界检查。
+
+## 环境与版本
+```
 时间: 2025-09-30T10:54:21+08:00
 内核: Linux zabab 6.6.87.1-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Mon Apr 21 17:08:54 UTC 2025 x86_64 x86_64 x86_64 GNU/Linux
 发行版:

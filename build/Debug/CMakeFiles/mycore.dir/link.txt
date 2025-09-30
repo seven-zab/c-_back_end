@@ -1,0 +1,2 @@
+/usr/bin/ar qc libmycore.a CMakeFiles/mycore.dir/src/memory_issues.cpp.o
+/usr/bin/ranlib libmycore.a

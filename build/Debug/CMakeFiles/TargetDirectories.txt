@@ -1,0 +1,5 @@
+/mnt/e/c++_backdown_learn/build/Debug/CMakeFiles/mycore.dir
+/mnt/e/c++_backdown_learn/build/Debug/CMakeFiles/demo_mem.dir
+/mnt/e/c++_backdown_learn/build/Debug/CMakeFiles/demo_mem_fixed.dir
+/mnt/e/c++_backdown_learn/build/Debug/CMakeFiles/edit_cache.dir
+/mnt/e/c++_backdown_learn/build/Debug/CMakeFiles/rebuild_cache.dir

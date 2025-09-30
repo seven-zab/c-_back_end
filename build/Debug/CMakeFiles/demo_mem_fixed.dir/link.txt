@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/demo_mem_fixed.dir/app/fixed_mem.cpp.o -o demo_mem_fixed  libmycore.a 

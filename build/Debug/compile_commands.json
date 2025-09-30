@@ -1,0 +1,20 @@
+[
+{
+  "directory": "/mnt/e/c++_backdown_learn/build/Debug",
+  "command": "/usr/bin/c++  -I/mnt/e/c++_backdown_learn/include -g -std=c++17 -g -Og -o CMakeFiles/mycore.dir/src/memory_issues.cpp.o -c /mnt/e/c++_backdown_learn/src/memory_issues.cpp",
+  "file": "/mnt/e/c++_backdown_learn/src/memory_issues.cpp",
+  "output": "CMakeFiles/mycore.dir/src/memory_issues.cpp.o"
+},
+{
+  "directory": "/mnt/e/c++_backdown_learn/build/Debug",
+  "command": "/usr/bin/c++  -I/mnt/e/c++_backdown_learn/include -g -std=c++17 -g -Og -o CMakeFiles/demo_mem.dir/app/buggy_mem.cpp.o -c /mnt/e/c++_backdown_learn/app/buggy_mem.cpp",
+  "file": "/mnt/e/c++_backdown_learn/app/buggy_mem.cpp",
+  "output": "CMakeFiles/demo_mem.dir/app/buggy_mem.cpp.o"
+},
+{
+  "directory": "/mnt/e/c++_backdown_learn/build/Debug",
+  "command": "/usr/bin/c++  -I/mnt/e/c++_backdown_learn/include -g -std=c++17 -g -Og -o CMakeFiles/demo_mem_fixed.dir/app/fixed_mem.cpp.o -c /mnt/e/c++_backdown_learn/app/fixed_mem.cpp",
+  "file": "/mnt/e/c++_backdown_learn/app/fixed_mem.cpp",
+  "output": "CMakeFiles/demo_mem_fixed.dir/app/fixed_mem.cpp.o"
+}
+]

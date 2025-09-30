@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/demo_mem.dir/app/buggy_mem.cpp.o -o demo_mem  libmycore.a 

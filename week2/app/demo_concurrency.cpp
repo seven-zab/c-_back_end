@@ -2,6 +2,7 @@
 #include <thread>
 #include <vector>
 #include <iostream>
+#include <atomic>
 
 int main(){
   BoundedQueue q(10);

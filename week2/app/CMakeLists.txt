@@ -1,0 +1,2 @@
+add_executable(demo_concurrency ${CMAKE_CURRENT_SOURCE_DIR}/demo_concurrency.cpp)
+target_link_libraries(demo_concurrency PRIVATE core2)

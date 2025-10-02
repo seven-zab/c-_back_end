@@ -1,0 +1,5 @@
+add_library(core2)
+target_sources(core2 PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/bounded_queue.cpp)
+target_include_directories(core2 PUBLIC ${CMAKE_SOURCE_DIR}/include)
+target_compile_features(core2 PUBLIC cxx_std_17)
+target_compile_options(core2 PRIVATE $<$<CONFIG:Debug>:-g -Og -Wall -Wextra -Wpedantic> $<$<CONFIG:Release>:-O2 -DNDEBUG>)

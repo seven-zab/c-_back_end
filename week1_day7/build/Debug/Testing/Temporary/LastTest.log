@@ -1,0 +1,25 @@
+Start testing: Oct 01 10:23 CST
+----------------------------------------------------------
+1/1 Testing: basic_tests
+1/1 Test: basic_tests
+Command: "/mnt/e/c++_backdown_learn/day7/week1_day7/build/Debug/bin/tests"
+Directory: /mnt/e/c++_backdown_learn/day7/week1_day7/build/Debug/tests
+"basic_tests" start time: Oct 01 10:23 CST
+Output:
+----------------------------------------------------------
+Buffer: 构造 size=10 地址=0x60f1fd9282b0
+Buffer: 拷贝构造 size=10
+Buffer: 移动构造
+Buffer 测试通过!
+Buffer: 析构 地址=0x60f1fd9282b0
+Buffer: 析构 地址=0x60f1fd9292e0
+Buffer: 析构 地址=0
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"basic_tests" end time: Oct 01 10:23 CST
+"basic_tests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Oct 01 10:23 CST

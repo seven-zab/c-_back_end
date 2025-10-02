@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/demo_buffer.dir/demo_buffer.cpp.o -o ../bin/demo_buffer  ../src/libmycore.a 

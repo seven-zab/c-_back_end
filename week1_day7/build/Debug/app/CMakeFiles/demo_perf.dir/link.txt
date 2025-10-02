@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/demo_perf.dir/demo_perf.cpp.o -o ../bin/demo_perf  ../src/libmycore.a 

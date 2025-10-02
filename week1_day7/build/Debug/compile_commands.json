@@ -1,0 +1,56 @@
+[
+{
+  "directory": "/mnt/e/c++_backdown_learn/day7/week1_day7/build/Debug/src",
+  "command": "/usr/bin/c++  -I/mnt/e/c++_backdown_learn/day7/week1_day7/include -g -std=c++17 -g -Og -Wall -Wextra -Wpedantic -o CMakeFiles/mycore.dir/buffer.cpp.o -c /mnt/e/c++_backdown_learn/day7/week1_day7/src/buffer.cpp",
+  "file": "/mnt/e/c++_backdown_learn/day7/week1_day7/src/buffer.cpp",
+  "output": "src/CMakeFiles/mycore.dir/buffer.cpp.o"
+},
+{
+  "directory": "/mnt/e/c++_backdown_learn/day7/week1_day7/build/Debug/src",
+  "command": "/usr/bin/c++  -I/mnt/e/c++_backdown_learn/day7/week1_day7/include -g -std=c++17 -g -Og -Wall -Wextra -Wpedantic -o CMakeFiles/mycore.dir/file_guard.cpp.o -c /mnt/e/c++_backdown_learn/day7/week1_day7/src/file_guard.cpp",
+  "file": "/mnt/e/c++_backdown_learn/day7/week1_day7/src/file_guard.cpp",
+  "output": "src/CMakeFiles/mycore.dir/file_guard.cpp.o"
+},
+{
+  "directory": "/mnt/e/c++_backdown_learn/day7/week1_day7/build/Debug/src",
+  "command": "/usr/bin/c++  -I/mnt/e/c++_backdown_learn/day7/week1_day7/include -g -std=c++17 -g -Og -Wall -Wextra -Wpedantic -o CMakeFiles/mycore.dir/mutex_guard.cpp.o -c /mnt/e/c++_backdown_learn/day7/week1_day7/src/mutex_guard.cpp",
+  "file": "/mnt/e/c++_backdown_learn/day7/week1_day7/src/mutex_guard.cpp",
+  "output": "src/CMakeFiles/mycore.dir/mutex_guard.cpp.o"
+},
+{
+  "directory": "/mnt/e/c++_backdown_learn/day7/week1_day7/build/Debug/src",
+  "command": "/usr/bin/c++  -I/mnt/e/c++_backdown_learn/day7/week1_day7/include -g -std=c++17 -g -Og -Wall -Wextra -Wpedantic -o CMakeFiles/mycore.dir/node.cpp.o -c /mnt/e/c++_backdown_learn/day7/week1_day7/src/node.cpp",
+  "file": "/mnt/e/c++_backdown_learn/day7/week1_day7/src/node.cpp",
+  "output": "src/CMakeFiles/mycore.dir/node.cpp.o"
+},
+{
+  "directory": "/mnt/e/c++_backdown_learn/day7/week1_day7/build/Debug/app",
+  "command": "/usr/bin/c++  -I/mnt/e/c++_backdown_learn/day7/week1_day7/include -g -std=c++17 -o CMakeFiles/demo_raii.dir/demo_raii.cpp.o -c /mnt/e/c++_backdown_learn/day7/week1_day7/app/demo_raii.cpp",
+  "file": "/mnt/e/c++_backdown_learn/day7/week1_day7/app/demo_raii.cpp",
+  "output": "app/CMakeFiles/demo_raii.dir/demo_raii.cpp.o"
+},
+{
+  "directory": "/mnt/e/c++_backdown_learn/day7/week1_day7/build/Debug/app",
+  "command": "/usr/bin/c++  -I/mnt/e/c++_backdown_learn/day7/week1_day7/include -g -std=c++17 -o CMakeFiles/demo_buffer.dir/demo_buffer.cpp.o -c /mnt/e/c++_backdown_learn/day7/week1_day7/app/demo_buffer.cpp",
+  "file": "/mnt/e/c++_backdown_learn/day7/week1_day7/app/demo_buffer.cpp",
+  "output": "app/CMakeFiles/demo_buffer.dir/demo_buffer.cpp.o"
+},
+{
+  "directory": "/mnt/e/c++_backdown_learn/day7/week1_day7/build/Debug/app",
+  "command": "/usr/bin/c++  -I/mnt/e/c++_backdown_learn/day7/week1_day7/include -g -std=c++17 -o CMakeFiles/demo_ownership.dir/demo_ownership.cpp.o -c /mnt/e/c++_backdown_learn/day7/week1_day7/app/demo_ownership.cpp",
+  "file": "/mnt/e/c++_backdown_learn/day7/week1_day7/app/demo_ownership.cpp",
+  "output": "app/CMakeFiles/demo_ownership.dir/demo_ownership.cpp.o"
+},
+{
+  "directory": "/mnt/e/c++_backdown_learn/day7/week1_day7/build/Debug/app",
+  "command": "/usr/bin/c++  -I/mnt/e/c++_backdown_learn/day7/week1_day7/include -g -std=c++17 -o CMakeFiles/demo_perf.dir/demo_perf.cpp.o -c /mnt/e/c++_backdown_learn/day7/week1_day7/app/demo_perf.cpp",
+  "file": "/mnt/e/c++_backdown_learn/day7/week1_day7/app/demo_perf.cpp",
+  "output": "app/CMakeFiles/demo_perf.dir/demo_perf.cpp.o"
+},
+{
+  "directory": "/mnt/e/c++_backdown_learn/day7/week1_day7/build/Debug/tests",
+  "command": "/usr/bin/c++  -I/mnt/e/c++_backdown_learn/day7/week1_day7/include -g -std=c++17 -o CMakeFiles/tests.dir/test.cpp.o -c /mnt/e/c++_backdown_learn/day7/week1_day7/tests/test.cpp",
+  "file": "/mnt/e/c++_backdown_learn/day7/week1_day7/tests/test.cpp",
+  "output": "tests/CMakeFiles/tests.dir/test.cpp.o"
+}
+]

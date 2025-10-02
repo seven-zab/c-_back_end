@@ -1,0 +1,11 @@
+Perf 报告占位：
+
+建议使用 Release 可执行采样：
+```
+perf record -F 999 -g build/Release/bin/demo_perf
+perf report --stdio | tee docs/perf_report.txt
+```
+若不支持 `perf record`，使用：
+```
+perf stat -e cycles,instructions,branches,branch-misses -r 5 build/Release/bin/demo_perf | tee docs/perf_stat.txt
+```

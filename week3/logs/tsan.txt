@@ -1,0 +1,2 @@
+TSan report will be written here by running demo_week3 under TSan build.
+请在 Linux/macOS 或 WSL 环境下构建 ENABLE_TSAN=ON 并运行，将 stderr 重定向到本文件。

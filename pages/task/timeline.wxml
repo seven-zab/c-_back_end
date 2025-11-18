@@ -1,0 +1,105 @@
+<view class="container">
+  <!-- 加载状态 -->
+  <view wx:if="{{loading}}" class="loading">
+    <text>加载中...</text>
+  </view>
+
+  <!-- 任务信息 -->
+  <view wx:elif="{{task}}" class="task-content">
+    <!-- 任务头部信息 -->
+    <view class="task-header">
+      <view class="task-title">{{task.title}}</view>
+      <view class="task-status status-{{task.status}}">
+        {{task.status === 'in_progress' ? '进行中' : task.status === 'completed' ? '已完成' : task.status === 'cancelled' ? '已取消' : '未知状态'}}
+      </view>
+    </view>
+
+    <view class="task-info">
+      <view class="info-item">
+        <text class="label">任务内容：</text>
+        <text class="value">{{task.content}}</text>
+      </view>
+      <view class="info-item">
+        <text class="label">任务地点：</text>
+        <text class="value">{{task.location}}</text>
+      </view>
+      <view class="info-item">
+        <text class="label">创建时间：</text>
+        <text class="value">{{task.createTime}}</text>
+      </view>
+      <view class="info-item">
+        <text class="label">发布者：</text>
+        <text class="value">{{task.publisherName}}</text>
+      </view>
+      <view class="info-item">
+        <text class="label">接取者：</text>
+        <text class="value">{{task.assigneeName}}</text>
+      </view>
+    </view>
+
+    <!-- 时间线 -->
+    <view class="timeline-section">
+      <view class="section-title">任务进度</view>
+      
+      <view class="timeline">
+        <view 
+          wx:for="{{task.timeline}}" 
+          wx:key="index" 
+          class="timeline-item {{item.completed ? 'completed' : 'pending'}}"
+          data-step-index="{{index}}"
+          bindtap="updateTimelineStep"
+        >
+          <view class="timeline-dot">
+            <text wx:if="{{item.completed}}" class="icon">✓</text>
+            <text wx:else class="step-number">{{index + 1}}</text>
+          </view>
+          
+          <view class="timeline-content">
+            <view class="step-title">{{item.title}}</view>
+            <view class="step-description">{{item.description}}</view>
+            <view wx:if="{{item.completedTime}}" class="completed-time">
+              完成时间：{{item.completedTime}}
+            </view>
+            <view wx:if="{{!item.completed && isAssignee}}" class="step-action">
+              <text class="action-hint">点击标记为完成</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <!-- 操作按钮 -->
+    <view class="action-section">
+      <button class="btn btn-contact" bindtap="contactOther">
+        {{isAssignee ? '联系发布者' : '联系接取者'}}
+      </button>
+      
+      <button 
+        wx:if="{{task.status === 'in_progress' && (isAssignee || isPublisher)}}" 
+        class="btn btn-cancel" 
+        bindtap="cancelTask"
+      >
+        取消任务
+      </button>
+    </view>
+
+    <!-- 角色提示 -->
+    <view class="role-info">
+      <view wx:if="{{isAssignee}}" class="role-badge assignee">
+        <text>您是任务接取者</text>
+      </view>
+      <view wx:elif="{{isPublisher}}" class="role-badge publisher">
+        <text>您是任务发布者</text>
+      </view>
+      <view wx:else class="role-badge observer">
+        <text>您是观察者</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 错误状态 -->
+  <view wx:else class="error">
+    <text class="error-icon">⚠️</text>
+    <text class="error-text">任务加载失败</text>
+  </view>
+</view>

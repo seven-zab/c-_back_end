@@ -1,0 +1,52 @@
+<view class="container">
+  <!-- 授权弹窗 -->
+  <view wx:if="{{showPopup}}">
+    <!-- 背景遮罩 -->
+    <view class="auth-mask" bindtap="onMaskTap"></view>
+
+    <!-- 底部弹出的授权界面 -->
+    <view class="auth-popup {{showPopup ? 'show' : ''}}">
+      <!-- 顶部应用信息 -->
+      <view class="popup-header">
+        <view class="app-info">
+          <image class="app-icon" src="/images/logo.svg" mode="aspectFit"></image>
+          <text class="app-name">技连邦</text>
+          <view class="info-icon">i</view>
+        </view>
+      </view>
+
+      <!-- 授权内容 -->
+      <view class="popup-content">
+        <view class="auth-title">获取你的昵称、头像</view>
+        <view class="auth-subtitle">标识你的会员信息</view>
+        
+        <!-- 获取信息按钮 -->
+        <button class="get-info-btn" bindtap="onGetUserInfo" disabled="{{loading || hasGotInfo}}">
+          {{hasGotInfo ? '已获取信息' : '获取你的头像，昵称信息'}}
+        </button>
+        
+        <!-- 显示获取到的信息 -->
+        <view wx:if="{{hasGotInfo}}" class="user-info-display">
+          <!-- 头像选择按钮 -->
+          <button open-type="chooseAvatar" bindchooseavatar="handleChooseAvatar" class="avatar-button">
+            <image class="avatar" src="{{avatarUrl}}" mode="aspectFit"></image>
+          </button>
+          
+          <!-- 昵称输入框 -->
+          <input type="nickname" value="{{nickName}}" bindinput="handleNicknameInput" class="nickname-input" placeholder="请输入昵称" />
+          
+          <view class="checkmark">✓</view>
+          <view class="auth-description">可以修改头像和昵称</view>
+        </view>
+      </view>
+
+      <!-- 底部按钮 -->
+      <view class="popup-actions">
+        <button class="reject-btn" bindtap="onReject" disabled="{{loading}}">拒绝</button>
+        <button class="allow-btn" bindtap="onAllow" loading="{{loading}}" disabled="{{loading || !hasGotInfo}}">
+          {{loading ? '保存中...' : '允许'}}
+        </button>
+      </view>
+    </view>
+  </view>
+</view>

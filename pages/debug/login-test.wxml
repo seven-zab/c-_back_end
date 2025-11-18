@@ -1,0 +1,70 @@
+<view class="container">
+  <view class="header">
+    <text class="title">登录状态测试</text>
+    <button class="refresh-btn" bindtap="refreshTest">刷新</button>
+  </view>
+
+  <!-- 当前状态概览 -->
+  <view class="status-overview">
+    <view class="status-item">
+      <text class="label">登录状态:</text>
+      <text class="value {{isLoggedIn ? 'success' : 'error'}}">
+        {{isLoggedIn ? '已登录' : '未登录'}}
+      </text>
+    </view>
+    
+    <view class="status-item" wx:if="{{user}}">
+      <text class="label">用户昵称:</text>
+      <text class="value">{{user.nickName || '未设置'}}</text>
+    </view>
+    
+    <view class="status-item" wx:if="{{user}}">
+      <text class="label">OpenID:</text>
+      <text class="value small">{{user.openid || '未获取'}}</text>
+    </view>
+  </view>
+
+  <!-- 测试结果 -->
+  <view class="test-results">
+    <text class="section-title">详细测试结果</text>
+    
+    <view class="test-item" wx:for="{{testResults}}" wx:key="test">
+      <view class="test-header">
+        <text class="test-name">{{item.test}}</text>
+        <text class="test-result {{item.result === '有数据' || item.result === '已登录' || item.result === '一致' ? 'success' : 'error'}}">
+          {{item.result}}
+        </text>
+      </view>
+      
+      <view class="test-data" wx:if="{{item.data}}">
+        <text class="data-label">数据:</text>
+        <text class="data-content">{{item.data}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 操作按钮 -->
+  <view class="actions">
+    <button class="action-btn primary" bindtap="goToLogin">
+      去登录
+    </button>
+    
+    <button class="action-btn secondary" bindtap="mockSaveUser">
+      模拟保存用户
+    </button>
+    
+    <button class="action-btn danger" bindtap="clearUserData">
+      清除用户数据
+    </button>
+  </view>
+
+  <!-- 说明信息 -->
+  <view class="info">
+    <text class="info-title">说明:</text>
+    <text class="info-text">
+      • 此页面用于测试用户登录状态的读取和保存功能
+      • 检查全局状态、本地存储、UserState工具类的一致性
+      • 如果发现问题，请检查相关代码逻辑
+    </text>
+  </view>
+</view>

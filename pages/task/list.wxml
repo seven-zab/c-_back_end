@@ -1,0 +1,74 @@
+<view class="container {{largeFont ? 'large-font' : ''}}">
+  <!-- 页面标题 -->
+  <view class="header">
+    <text class="title">我的任务</text>
+  </view>
+
+  <!-- 标签页切换 -->
+  <view class="tabs">
+    <view 
+      wx:for="{{tabs}}" 
+      wx:key="key"
+      class="tab-item {{activeTab === item.key ? 'active' : ''}}"
+      data-tab="{{item.key}}"
+      bindtap="switchTab"
+    >
+      {{item.name}}
+    </view>
+  </view>
+
+  <!-- 加载状态 -->
+  <view class="loading" wx:if="{{loading}}">
+    <text>加载中...</text>
+  </view>
+
+  <!-- 空状态 -->
+  <view class="empty-state" wx:elif="{{isEmpty}}">
+    <view class="empty-icon">📋</view>
+    <text class="empty-text">{{activeTab === 'ongoing' ? '暂无进行中的任务' : '暂无已完成的任务'}}</text>
+    <text class="empty-tip">{{activeTab === 'ongoing' ? '接取需求后任务会显示在这里' : '完成任务后会显示在这里'}}</text>
+    <view class="empty-actions" wx:if="{{activeTab === 'ongoing'}}">
+      <navigator url="/pages/test-task/test-task" class="empty-btn" open-type="navigate">
+        创建测试任务
+      </navigator>
+    </view>
+  </view>
+
+  <!-- 任务列表 -->
+  <view class="task-list" wx:else>
+    <view 
+      wx:for="{{tasks}}" 
+      wx:key="_id"
+      class="task-item"
+      data-task-id="{{item._id}}"
+      bindtap="goToTaskDetail"
+    >
+      <!-- 任务头部信息 -->
+      <view class="task-header">
+        <view class="task-title-section">
+          <view class="task-title">{{item.title}}</view>
+          <view class="task-type" wx:if="{{item.type === 'demand'}}">需求接取</view>
+          <view class="task-type" wx:if="{{item.type === 'application'}}">申请中</view>
+        </view>
+        <view class="task-status status-{{item.status}}">{{item.statusText}}</view>
+      </view>
+
+      <!-- 任务描述 -->
+      <view class="task-description">{{item.content || item.description}}</view>
+
+      <!-- 进度条 -->
+      <view class="progress-section" wx:if="{{activeTab === 'ongoing'}}">
+        <view class="progress-label">进度: {{item.progressPercent}}%</view>
+        <view class="progress-bar">
+          <view class="progress-fill" style="width: {{item.progressPercent}}%"></view>
+        </view>
+      </view>
+
+      <!-- 任务底部信息 -->
+      <view class="task-footer">
+        <view class="task-date">创建时间: {{item.createdAtFormatted}}</view>
+        <view class="task-arrow">></view>
+      </view>
+    </view>
+  </view>
+</view>

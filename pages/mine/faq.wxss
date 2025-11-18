@@ -1,0 +1,9 @@
+/* FAQ 样式增强 */
+.faq { padding: 32rpx 32rpx 120rpx; }
+.search-bar { margin-bottom: 20rpx; }
+.search-input { background:#fff; border-radius: 999rpx; padding: 18rpx 24rpx; font-size: 28rpx; box-shadow: 0 8rpx 24rpx rgba(0,0,0,0.04); }
+.qa { background:#fff; border-radius:16rpx; padding: 28rpx; margin-bottom: 12rpx; box-shadow:0 8rpx 24rpx rgba(0,0,0,0.04); display:flex; justify-content:space-between; align-items:center; }
+.q { color:#333; font-size: 30rpx; }
+.arrow { color:#999; }
+.a-panel { background:#fff; border-radius:0 0 16rpx 16rpx; margin-top:-12rpx; padding: 0 28rpx 24rpx; box-shadow:0 8rpx 24rpx rgba(0,0,0,0.04); }
+.a { display:block; color:#666; font-size: 28rpx; line-height: 1.8; }

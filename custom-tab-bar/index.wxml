@@ -1,0 +1,23 @@
+<view id="tabbar" class="tabbar card">
+  <view class="tabbar-item {{selected==0?'active':''}}" bindtap="switchTab" data-path="pages/index/index">
+    <text class="icon">🏠</text>
+    <text class="label">首页</text>
+  </view>
+  <view class="tabbar-item {{selected==1?'active':''}}" bindtap="switchTab" data-path="pages/chat/chat">
+    <view class="icon badge-wrap">
+      <text>💬</text>
+      <view wx:if="{{unreadCount>0}}" class="badge">{{unreadCount}}</view>
+    </view>
+    <text class="label">聊天</text>
+  </view>
+  <!-- 新增 客服 Tab -->
+  <view class="tabbar-item {{selected==2?'active':''}}" bindtap="switchTab" data-path="pages/service/index">
+    <text class="icon">🛎️</text>
+    <text class="label">客服</text>
+  </view>
+  <!-- 我的 Tab 的选中索引改为 3 -->
+  <view class="tabbar-item {{selected==3?'active':''}}" bindtap="switchTab" data-path="pages/mine/mine">
+    <text class="icon">👤</text>
+    <text class="label">我的</text>
+  </view>
+</view>

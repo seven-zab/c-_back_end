@@ -1,0 +1,19 @@
+{
+  "privacyList": [
+    {
+      "privacyKey": "OPENID",
+      "privacyText": "用户唯一标识",
+      "privacyDesc": "用于用户登录和标识，存储在云数据库中，不与第三方共享。"
+    },
+    {
+      "privacyKey": "USER_NICK_NAME",
+      "privacyText": "用户昵称",
+      "privacyDesc": "用于显示和标识会员信息，存储在云数据库中，不与第三方共享。"
+    },
+    {
+      "privacyKey": "USER_AVATAR",
+      "privacyText": "用户头像",
+      "privacyDesc": "用于显示会员头像，存储在云存储中，不与第三方共享。"
+    }
+  ]
+}

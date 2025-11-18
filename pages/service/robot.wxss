@@ -1,0 +1,27 @@
+.chat-area { min-height: 60vh; }
+.msg { display:flex; margin: 12rpx 0; }
+.msg.user { justify-content: flex-end; }
+.bubble { display:inline-block; padding: 16rpx 20rpx; border-radius: 16rpx; max-width: 80%; white-space: pre-wrap; }
+.msg.user .bubble { background:#1677ff; color:#fff; border-bottom-right-radius: 6rpx; }
+.msg.bot .bubble { background:#f5f5f5; color:#333; border-bottom-left-radius: 6rpx; }
+/* 统一美化输入条与发送按钮（覆盖/增强原样式） */
+.input-bar {
+  position: fixed;
+  left: 24rpx;
+  right: 24rpx;
+  bottom: 24rpx;
+  background: #fff;
+  border-radius: 999rpx;
+  padding: 12rpx;
+  box-shadow: 0 12rpx 24rpx rgba(0,0,0,0.06);
+  z-index: 9;
+}
+.ipt {
+  flex: 1;
+  background: #f7f8fa;
+  border-radius: 999rpx;
+  padding: 16rpx 22rpx;
+  margin-right: 12rpx;
+}
+.btn { min-width: 140rpx; }
+.btn { margin-left: 10rpx; }

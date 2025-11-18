@@ -1,0 +1,14 @@
+.article-page { padding: 16rpx; background: #f7f8fa; min-height: 100vh; }
+.article-card { background: #fff; border-radius: 20rpx; box-shadow: 0 8rpx 24rpx rgba(0,0,0,0.06); padding: 28rpx; }
+.article-title { font-size: 36rpx; font-weight: 600; color: #111; line-height: 1.4; }
+.article-meta { margin-top: 10rpx; color: #888; font-size: 24rpx; }
+.article-cover { margin: 20rpx 0; overflow: hidden; border-radius: 16rpx; }
+.article-cover image { width: 100%; display: block; }
+.article-content { font-size: 30rpx; color: #333; line-height: 1.9; }
+.article-source { margin-top: 24rpx; color: #555; font-size: 26rpx; word-break: break-all; }
+.article-source .link { color: #1677ff; }
+.action-bar { position: fixed; left: 0; right: 0; bottom: 0; padding: 12rpx 20rpx calc(12rpx + env(safe-area-inset-bottom)); background: rgba(255,255,255,0.96); backdrop-filter: saturate(180%) blur(8px); box-shadow: 0 -6rpx 16rpx rgba(0,0,0,0.06); display: flex; gap: 16rpx; }
+.btn-copy, .btn-share { flex: 1; height: 88rpx; line-height: 88rpx; text-align: center; border-radius: 16rpx; }
+.btn-copy { background: #1677ff; color: #fff; }
+.btn-share { background: #f0f5ff; color: #1677ff; border: 1rpx solid #1677ff; }
+.safe-area { height: calc(88rpx + 24rpx + env(safe-area-inset-bottom)); }

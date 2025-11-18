@@ -1,0 +1,39 @@
+/* 自定义 TabBar 样式 */
+.tabbar {
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  height: 120rpx;
+  background: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 -8rpx 16rpx rgba(0,0,0,0.06);
+  border-top-left-radius: 24rpx;
+  border-top-right-radius: 24rpx;
+  padding-bottom: env(safe-area-inset-bottom);
+  z-index: 999;
+}
+
+.tabbar-item {
+  flex:1;
+  text-align: center;
+  color: #666;
+  transition: color .2s ease, transform .2s ease;
+}
+
+.tabbar-item .icon { display:block; font-size: 42rpx; transition: transform .2s ease; }
+.tabbar-item .label { display:block; font-size: 24rpx; margin-top: 6rpx; letter-spacing: 1rpx; }
+
+.tabbar-item.active { color: #1677ff; text-shadow: 0 4rpx 10rpx rgba(22,119,255,0.20); }
+/* 去除渐变指示条，保留基础高亮色 */
+.tabbar-item.active::after { display:none; }
+.tabbar-item.active .icon { transform: scale(1.12); }
+
+.badge-wrap { position: relative; width: 40rpx; height: 40rpx; margin: 0 auto; }
+.badge {
+  position: absolute; top: -8rpx; right: -16rpx;
+  min-width: 28rpx; height: 28rpx; padding: 0 6rpx;
+  background: #ff4d4f; color:#fff; font-size: 20rpx;
+  border-radius: 28rpx; line-height: 28rpx; text-align: center;
+  box-shadow: 0 6rpx 12rpx rgba(255,77,79,0.4);
+}

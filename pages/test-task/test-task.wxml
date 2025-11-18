@@ -1,0 +1,54 @@
+<view class="container">
+  <view class="header">
+    <text class="title">任务功能测试</text>
+    <text class="subtitle">创建测试任务来验证功能</text>
+  </view>
+
+  <view class="button-group">
+    <button 
+      class="test-btn delivery-btn" 
+      bindtap="createTestTask"
+      disabled="{{loading}}"
+    >
+      创建配送任务
+    </button>
+    
+    <button 
+      class="test-btn general-btn" 
+      bindtap="createGeneralTask"
+      disabled="{{loading}}"
+    >
+      创建通用任务
+    </button>
+    
+    <button 
+      class="test-btn list-btn" 
+      bindtap="goToTaskList"
+    >
+      查看任务列表
+    </button>
+  </view>
+
+  <!-- 结果显示 -->
+  <view class="result-section" wx:if="{{result}}">
+    <view class="result-title">测试结果</view>
+    <view class="result-content">{{result}}</view>
+    <button class="clear-btn" bindtap="clearResult">清空结果</button>
+  </view>
+
+  <!-- 加载状态 -->
+  <view class="loading" wx:if="{{loading}}">
+    <text>创建中...</text>
+  </view>
+
+  <!-- 说明文档 -->
+  <view class="info-section">
+    <view class="info-title">功能说明</view>
+    <view class="info-content">
+      <text class="info-item">• 配送任务：包含取货、配送等步骤</text>
+      <text class="info-item">• 通用任务：包含基本的执行步骤</text>
+      <text class="info-item">• 创建后可在"我的任务"中查看和操作</text>
+      <text class="info-item">• 点击步骤可确认完成进度</text>
+    </view>
+  </view>
+</view>

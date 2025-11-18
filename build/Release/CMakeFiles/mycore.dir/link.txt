@@ -1,2 +1,0 @@
-/usr/bin/ar qc libmycore.a CMakeFiles/mycore.dir/src/file_guard.cpp.o CMakeFiles/mycore.dir/src/mutex_guard.cpp.o CMakeFiles/mycore.dir/src/buffer.cpp.o CMakeFiles/mycore.dir/src/node.cpp.o
-/usr/bin/ranlib libmycore.a

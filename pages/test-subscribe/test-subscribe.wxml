@@ -1,0 +1,60 @@
+<view class="container">
+  <view class="header">
+    <text class="title">订阅消息测试</text>
+  </view>
+
+  <view class="config-section">
+    <text class="section-title">配置检查</text>
+    <view class="config-item">
+      <text class="label">模板ID数量:</text>
+      <text class="value">{{templateIds.length}}</text>
+    </view>
+    <view class="config-item" wx:if="{{templateIds.length > 0}}">
+      <text class="label">模板ID列表:</text>
+      <view class="template-list">
+        <text class="template-id" wx:for="{{templateIds}}" wx:key="*this">{{item}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="action-section">
+    <text class="section-title">测试操作</text>
+    <button class="test-btn" bindtap="testSubscribe" type="primary">
+      测试订阅授权
+    </button>
+    <button class="test-btn" bindtap="clearLogs" type="default">
+      清空日志
+    </button>
+    <button class="test-btn" bindtap="copyLogs" type="default">
+      复制日志
+    </button>
+  </view>
+
+  <view class="logs-section">
+    <text class="section-title">测试日志</text>
+    <scroll-view class="logs-container" scroll-y="true">
+      <view class="log-item {{item.type}}" wx:for="{{logs}}" wx:key="index">
+        <text class="log-text">{{item.message}}</text>
+      </view>
+      <view class="log-item" wx:if="{{logs.length === 0}}">
+        <text class="log-text placeholder">暂无日志</text>
+      </view>
+    </scroll-view>
+  </view>
+
+  <view class="tips-section">
+    <text class="section-title">使用说明</text>
+    <view class="tip-item">
+      <text class="tip-text">1. 确保在真机上测试（开发者工具不支持）</text>
+    </view>
+    <view class="tip-item">
+      <text class="tip-text">2. 在app.js中配置正确的模板ID</text>
+    </view>
+    <view class="tip-item">
+      <text class="tip-text">3. 确保云开发环境已正确配置</text>
+    </view>
+    <view class="tip-item">
+      <text class="tip-text">4. 查看控制台和日志获取详细信息</text>
+    </view>
+  </view>
+</view>

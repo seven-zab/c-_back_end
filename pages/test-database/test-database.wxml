@@ -1,0 +1,35 @@
+<view class="container">
+  <view class="header">
+    <text class="title">数据库初始化工具</text>
+    <text class="subtitle">检查和创建必要的数据库集合</text>
+  </view>
+
+  <view class="actions">
+    <button class="btn primary" bindtap="checkCollections">检查集合状态</button>
+    <button class="btn success" bindtap="createCollections">创建缺失集合</button>
+    <button class="btn secondary" bindtap="clearLogs">清空日志</button>
+    <button class="btn info" bindtap="copyLogs">复制日志</button>
+  </view>
+
+  <view class="collections" wx:if="{{collections.length > 0}}">
+    <text class="section-title">集合状态</text>
+    <view class="collection-item" wx:for="{{collections}}" wx:key="collection">
+      <text class="collection-name">{{item.collection}}</text>
+      <text class="collection-status {{item.exists ? 'exists' : 'missing'}}">
+        {{item.exists ? '✅ 存在' : '❌ 缺失'}}
+      </text>
+    </view>
+  </view>
+
+  <view class="logs">
+    <text class="section-title">操作日志</text>
+    <view class="log-container">
+      <view class="log-item" wx:for="{{logs}}" wx:key="index">
+        <text class="log-text">{{item}}</text>
+      </view>
+      <view wx:if="{{logs.length === 0}}" class="empty-logs">
+        <text>暂无日志</text>
+      </view>
+    </view>
+  </view>
+</view>

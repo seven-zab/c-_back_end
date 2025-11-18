@@ -1,0 +1,14 @@
+<view class="container">
+  <view class="card chat-area">
+    <block wx:for="{{messages}}" wx:key="*this">
+      <view class="msg {{item.role}}">
+        <text class="bubble">{{item.content}}</text>
+      </view>
+    </block>
+  </view>
+  <view class="input-bar card">
+    <input class="ipt" placeholder="请输入问题，例如：如何发布一个需求？" value="{{input}}" bindinput="onInput" confirm-type="send" bindconfirm="onSend" />
+    <button class="btn" size="mini" bindtap="onSend">发送</button>
+  </view>
+  <view class="tabbar-placeholder"></view>
+</view>

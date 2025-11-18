@@ -1,0 +1,18 @@
+<view class="container chat-detail">
+  <scroll-view scroll-y class="msg-list" scroll-into-view="{{scrollTo}}" scroll-with-animation>
+    <block wx:for="{{messages}}" wx:key="index">
+      <view class="msg-item {{item.type}}" id="msg-{{index}}">
+        <view class="avatar">{{item.type==='sent'?'🧑‍💼':'👨‍🏫'}}</view>
+        <view class="bubble">
+          <text class="content">{{item.content}}</text>
+          <text class="time">{{item.time}}</text>
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+
+  <view class="input-bar card">
+    <input class="input" placeholder="输入消息" value="{{input}}" bindinput="onInput" confirm-type="send" bindconfirm="onSend"/>
+    <button class="send" bindtap="onSend">发送</button>
+  </view>
+</view>

@@ -1,0 +1,76 @@
+<view class="container">
+  <view class="header">
+    <text class="title">任务报表</text>
+    <view class="permission-info">
+      <text class="permission-text">当前身份：{{userPermission.permissionName}}</text>
+    </view>
+  </view>
+
+  <!-- 筛选条件 -->
+  <view class="filter-section">
+    <view class="filter-item">
+      <text class="filter-label">时间范围：</text>
+      <picker mode="date" value="{{startDate}}" bindchange="onStartDateChange">
+        <view class="date-picker">{{startDate || '开始日期'}}</view>
+      </picker>
+      <text class="date-separator">至</text>
+      <picker mode="date" value="{{endDate}}" bindchange="onEndDateChange">
+        <view class="date-picker">{{endDate || '结束日期'}}</view>
+      </picker>
+    </view>
+    
+    <view class="filter-actions">
+      <button class="filter-btn" bindtap="loadReportData">查询</button>
+      <button class="filter-btn export-btn" bindtap="exportReport">导出报表</button>
+    </view>
+  </view>
+
+  <!-- 统计概览 -->
+  <view class="stats-section">
+    <view class="stats-item">
+      <text class="stats-number">{{reportData.totalTasks}}</text>
+      <text class="stats-label">总任务数</text>
+    </view>
+    <view class="stats-item">
+      <text class="stats-number">{{reportData.completedTasks}}</text>
+      <text class="stats-label">已完成</text>
+    </view>
+    <view class="stats-item">
+      <text class="stats-number">{{reportData.pendingTasks}}</text>
+      <text class="stats-label">进行中</text>
+    </view>
+    <view class="stats-item">
+      <text class="stats-number">{{reportData.teams}}</text>
+      <text class="stats-label">参与队伍</text>
+    </view>
+  </view>
+
+  <!-- 任务列表 -->
+  <view class="task-list">
+    <view class="list-header">
+      <text class="list-title">任务详情</text>
+    </view>
+    
+    <view class="task-item" wx:for="{{reportData.tasks}}" wx:key="id">
+      <view class="task-info">
+        <text class="task-name">{{item.title}}</text>
+        <text class="task-team">对接队伍：{{item.teamName || '暂无'}}</text>
+        <text class="task-contact">对接人：{{item.contact}} {{item.phone}}</text>
+        <text class="task-time">时间：{{item.timeStart}} 至 {{item.timeEnd}}</text>
+        <text class="task-region" wx:if="{{item.regionStr}}">地区：{{item.regionStr}}</text>
+      </view>
+      <view class="task-status {{item.status}}">
+        <text>{{item.statusText}}</text>
+      </view>
+    </view>
+
+    <view class="empty-state" wx:if="{{reportData.tasks.length === 0}}">
+      <text>暂无数据</text>
+    </view>
+  </view>
+
+  <!-- 加载状态 -->
+  <view class="loading" wx:if="{{loading}}">
+    <text>加载中...</text>
+  </view>
+</view>

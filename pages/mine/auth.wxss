@@ -1,0 +1,18 @@
+.auth { padding: 48rpx 32rpx; }
+.card { background:#fff; border-radius:16rpx; padding:64rpx 32rpx; display:flex; flex-direction:column; gap:24rpx; box-shadow:0 8rpx 24rpx rgba(0,0,0,0.04); }
+.title { font-size: 36rpx; color:#333; }
+.tip { color:#888; font-size: 26rpx; }
+.divider { height: 1px; background: #eee; margin: 12rpx 0; }
+.sms-form { display:flex; flex-direction:column; gap: 20rpx; }
+.input { border:1px solid #ddd; border-radius: 8rpx; padding: 20rpx; }
+.code-row { display:flex; gap: 16rpx; align-items:center; }
+.sec-btn { background:#f0f0f0; color:#333; }
+.primary-btn { background:#1677ff; color:#fff; border-radius: 8rpx; padding: 16rpx; }
+/* 统一卡片内的按钮与 navigator 宽度与居中 */
+.card button,
+.card navigator { width: 480rpx; margin: 12rpx auto 0; display: block; text-align: center; box-sizing: border-box; }
+/* 纵向排列时去掉相邻元素的左偏移 */
+.card button + button,
+.card navigator + navigator,
+.card button + navigator,
+.card navigator + button { margin-left: 0 !important; }

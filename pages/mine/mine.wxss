@@ -1,0 +1,151 @@
+/* 我的页样式 */
+.container.mine { padding: 48rpx 32rpx 140rpx; }
+.profile-section { display:flex; flex-direction:column; align-items:center; gap: 24rpx; background:#fff; border-radius:16rpx; padding: 64rpx 32rpx; box-shadow: 0 8rpx 24rpx rgba(0,0,0,0.04); }
+
+/* 任务功能样式 */
+.task-section {
+  width: 100%;
+  margin: 24rpx 0;
+}
+
+.task-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(135deg, #667EEA, #764BA2);
+  border-radius: 16rpx;
+  padding: 32rpx;
+  box-shadow: 0 8rpx 24rpx rgba(102, 126, 234, 0.3);
+}
+
+.task-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8rpx;
+}
+
+.task-title {
+  color: #fff;
+  font-size: 32rpx;
+  font-weight: 600;
+}
+
+.task-count {
+  color: #E0E7FF;
+  font-size: 24rpx;
+}
+
+.task-empty {
+  color: #C7D2FE;
+  font-size: 24rpx;
+}
+
+.task-arrow {
+  color: #fff;
+  font-size: 32rpx;
+  font-weight: bold;
+}
+.avatar-img { width: 160rpx; height: 160rpx; border-radius: 80rpx; }
+.avatar { width: 160rpx; height: 160rpx; border-radius: 80rpx; background: #f2f3f5; display:flex; align-items:center; justify-content:center; font-size: 64rpx; }
+.welcome { color:#333; font-size: 30rpx; }
+/* 统一本页主按钮外观，并确保 navigator 也按按钮显示 */
+.primary-btn { 
+  width: 480rpx !important; 
+  margin: 12rpx auto 0 !important; 
+  display: block; 
+  text-align: center; 
+  box-sizing: border-box; 
+  white-space: nowrap; /* 禁止文字换行 */
+  overflow: hidden;    /* 隐藏溢出内容 */
+  text-overflow: ellipsis; /* 溢出显示省略号（可选） */
+  padding: 16rpx 0;    /* 固定上下内边距，保证高度一致 */
+}
+/* Mine 页：统一按钮高度/行高，避免文字长度不同造成视觉不齐 */
+.profile-section .primary-btn { 
+  height: 88rpx; 
+  line-height: 88rpx; 
+  padding: 0 36rpx; 
+  white-space: nowrap;
+  /* 确保navigator和button完全一致的样式 */
+  border: none;
+  outline: none;
+  background: linear-gradient(135deg, #3B82F6, #06B6D4);
+  color: #fff;
+  border-radius: 999rpx;
+  font-size: 30rpx;
+  font-weight: 600;
+  box-shadow: 0 12rpx 28rpx rgba(59, 130, 246, 0.28);
+  /* 重置可能的默认样式 */
+  text-decoration: none;
+  position: relative;
+}
+
+/* 测试按钮特殊样式 */
+.test-btn {
+  background: linear-gradient(135deg, #10B981, #059669) !important;
+  box-shadow: 0 12rpx 28rpx rgba(16, 185, 129, 0.28) !important;
+}
+
+.footer-links { margin-top: 32rpx; display:flex; justify-content:center; }
+.faq { color:#1677ff; font-size: 28rpx; padding: 24rpx; }
+/* 移除重复定义，以上方样式为准，避免不同 padding/圆角造成错位 */
+
+/* 权限管理区域样式 */
+.permission-section {
+  width: 100%;
+  margin: 24rpx 0;
+  background: #fff;
+  border-radius: 16rpx;
+  padding: 32rpx;
+  box-shadow: 0 8rpx 24rpx rgba(0,0,0,0.04);
+}
+
+.permission-status {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24rpx;
+  padding: 20rpx;
+  background: linear-gradient(135deg, #F3F4F6, #E5E7EB);
+  border-radius: 12rpx;
+}
+
+.permission-label {
+  color: #6B7280;
+  font-size: 28rpx;
+  margin-right: 16rpx;
+}
+
+.permission-value {
+  color: #1F2937;
+  font-size: 28rpx;
+  font-weight: 600;
+}
+
+.permission-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 16rpx;
+}
+
+.permission-btn {
+  width: 100%;
+  height: 88rpx;
+  line-height: 88rpx;
+  border-radius: 12rpx;
+  font-size: 30rpx;
+  font-weight: 600;
+  border: none;
+  outline: none;
+}
+
+.apply-btn {
+  background: linear-gradient(135deg, #10B981, #059669);
+  color: #fff;
+  box-shadow: 0 8rpx 20rpx rgba(16, 185, 129, 0.3);
+}
+
+.permission-management {
+  margin-top: 16rpx;
+  background: linear-gradient(135deg, #F59E0B, #D97706);
+  box-shadow: 0 8rpx 24rpx rgba(245, 158, 11, 0.3);
+}

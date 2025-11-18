@@ -1,0 +1,14 @@
+<view class="container faq">
+  <view class="search-bar">
+    <input class="search-input" placeholder="搜索问题关键词" bindinput="onSearchInput" value="{{keyword}}"/>
+  </view>
+  <block wx:for="{{filteredFaqs}}" wx:key="*this">
+    <view class="qa" bindtap="toggle" data-index="{{index}}">
+      <text class="q">{{item.q}}</text>
+      <text class="arrow">{{item.open? '▲' : '▼'}}</text>
+    </view>
+    <view class="a-panel" wx:if="{{item.open}}">
+      <text class="a">{{item.a}}</text>
+    </view>
+  </block>
+</view>

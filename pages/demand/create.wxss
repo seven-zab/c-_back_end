@@ -1,0 +1,48 @@
+/* 发布需求表单样式 */
+/* 表单容器卡片化与间距优化 */
+.container { padding: 28rpx 28rpx 160rpx; }
+.form-item { margin-bottom: 28rpx; }
+.input, .textarea, .picker { background:#fff; border-radius: 16rpx; padding: 22rpx; box-shadow: 0 10rpx 22rpx rgba(0,0,0,0.04); }
+.textarea { min-height: 180rpx; }
+
+/* 顶部分组标题样式 */
+.section-title { font-size: 28rpx; color: #666; margin: 18rpx 6rpx; }
+
+/* 发布按钮固定底部更稳妥（避免误触） */
+.submit-fixed {
+  position: fixed; left: 24rpx; right: 24rpx; bottom: 24rpx;
+}
+.label { display:block; color:#666; font-size: 26rpx; margin-bottom: 10rpx; }
+.input, .textarea, .picker { background:#fff; border-radius: 14rpx; padding: 20rpx; box-shadow: 0 8rpx 16rpx rgba(0,0,0,0.04); }
+.textarea { min-height: 160rpx; }
+.picker { color:#333; }
+.submit { margin-top: 20rpx; background:#1677ff; color:#fff; border-radius: 999rpx; }
+
+/* 行内排版 */
+.row { display:flex; gap: 16rpx; }
+
+/* 技能选项网格与高亮 */
+.skill-grid { display:flex; flex-wrap:wrap; gap: 12rpx; }
+.skill-item { 
+  background:#fff; 
+  padding: 10rpx 16rpx; 
+  border-radius: 12rpx; 
+  box-shadow: 0 8rpx 16rpx rgba(0,0,0,0.04); 
+  display:flex; 
+  align-items:center; 
+  gap: 8rpx; 
+  border: 2rpx solid transparent;
+  position: relative;
+  cursor: pointer;
+}
+.skill-item.active { border-color:#1677ff; color:#1677ff; }
+.hidden-checkbox { 
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: 100%; 
+  opacity: 0; 
+  z-index: 1;
+}
+.skill-text { font-size: 26rpx; pointer-events: none; }

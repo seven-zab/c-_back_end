@@ -1,1 +1,0 @@
-/usr/bin/c++ -O2 -DNDEBUG CMakeFiles/demo_buffer.dir/app/demo_buffer.cpp.o -o demo_buffer  libmycore.a 

@@ -1,0 +1,100 @@
+<view class="container">
+  <!-- 加载状态 -->
+  <view class="loading" wx:if="{{loading}}">
+    <text>加载中...</text>
+  </view>
+
+  <!-- 任务详情 -->
+  <view wx:else>
+    <!-- 任务基本信息 -->
+    <view class="task-info">
+      <view class="task-header">
+        <view class="task-title">{{task.title}}</view>
+        <view class="task-status status-{{task.status}}">{{task.statusText}}</view>
+      </view>
+      
+      <view class="task-description">{{task.description}}</view>
+      
+      <view class="task-meta">
+        <view class="meta-item">
+          <text class="meta-label">创建时间:</text>
+          <text class="meta-value">{{task.createdAtFormatted}}</text>
+        </view>
+        <view class="meta-item" wx:if="{{task.location}}">
+          <text class="meta-label">指定地点:</text>
+          <text class="meta-value">{{task.location}}</text>
+        </view>
+        <view class="meta-item" wx:if="{{task.deadline}}">
+          <text class="meta-label">截止时间:</text>
+          <text class="meta-value">{{task.deadline}}</text>
+        </view>
+      </view>
+    </view>
+
+    <!-- 进度时间线 -->
+    <view class="timeline-section">
+      <view class="section-title">任务进度</view>
+      
+      <view class="timeline">
+        <view 
+          wx:for="{{timeline}}" 
+          wx:key="index"
+          class="timeline-item {{item.completed ? 'completed' : 'pending'}}"
+          data-index="{{index}}"
+          bindtap="onStepTap"
+        >
+          <!-- 时间线节点 -->
+          <view class="timeline-node">
+            <view class="node-dot {{item.completed ? 'completed' : 'pending'}}">
+              <text class="node-icon" wx:if="{{item.completed}}">✓</text>
+            </view>
+            <view class="node-line" wx:if="{{!item.isLast}}"></view>
+          </view>
+
+          <!-- 步骤内容 -->
+          <view class="timeline-content">
+            <view class="step-header">
+              <view class="step-title">{{item.title}}</view>
+              <view class="step-status">
+                <text wx:if="{{item.completed}}" class="completed-text">已完成</text>
+                <text wx:else class="pending-text">待完成</text>
+              </view>
+            </view>
+            
+            <view class="step-description" wx:if="{{item.description}}">
+              {{item.description}}
+            </view>
+            
+            <view class="step-time" wx:if="{{item.completedAtFormatted}}">
+              完成时间: {{item.completedAtFormatted}}
+            </view>
+            
+            <!-- 未完成步骤的操作提示 -->
+            <view class="step-action" wx:if="{{!item.completed && task.status !== 'completed'}}">
+              <text class="action-text">点击确认完成此步骤</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 确认完成步骤的弹窗 -->
+  <view class="modal-overlay" wx:if="{{showConfirmModal}}" bindtap="closeConfirmModal">
+    <view class="modal-content" catchtap="">
+      <view class="modal-header">
+        <text class="modal-title">确认完成步骤</text>
+      </view>
+      
+      <view class="modal-body">
+        <text class="confirm-text">确认完成步骤：{{currentStep.title}}？</text>
+        <text class="confirm-tip">完成后将无法撤销</text>
+      </view>
+      
+      <view class="modal-footer">
+        <button class="cancel-btn" bindtap="closeConfirmModal">取消</button>
+        <button class="confirm-btn" bindtap="confirmStep">确认完成</button>
+      </view>
+    </view>
+  </view>
+</view>

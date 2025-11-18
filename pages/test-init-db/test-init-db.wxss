@@ -1,0 +1,58 @@
+.container {
+  padding: 20px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.btn {
+  background: #007aff;
+  color: white;
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.results {
+  margin-top: 20px;
+  padding: 15px;
+  background: #f5f5f5;
+  border-radius: 8px;
+}
+
+.section-title {
+  font-size: 16px;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.result-item {
+  margin-bottom: 8px;
+}
+
+.collection-item {
+  margin-bottom: 5px;
+  padding: 5px;
+  background: white;
+  border-radius: 4px;
+}
+
+.error {
+  color: red;
+  display: block;
+  font-size: 12px;
+}

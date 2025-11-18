@@ -1,0 +1,23 @@
+<view class="container">
+  <view class="card grid">
+    <view class="grid-item" bindtap="goAIBot">
+      <view class="icon">🤖</view>
+      <view class="title">AI客服</view>
+      <view class="desc">智能问答 · 发布需求指引</view>
+    </view>
+    <view class="grid-item" bindtap="goHuman">
+      <view class="icon">🧑‍💼</view>
+      <view class="title">人工客服</view>
+      <view class="desc">联系平台客服人员</view>
+    </view>
+  </view>
+  <view class="tip card">
+    <view>常用提示词：</view>
+    <view class="tips">
+      <text class="tip" bindtap="usePrompt" data-text="如何发布一个需求？">如何发布一个需求？</text>
+      <text class="tip" bindtap="usePrompt" data-text="发布需求需要哪些信息？">发布需求需要哪些信息？</text>
+      <text class="tip" bindtap="usePrompt" data-text="如何联系技术专家？">如何联系技术专家？</text>
+    </view>
+  </view>
+  <view class="tabbar-placeholder"></view>
+</view>

@@ -1,0 +1,137 @@
+.container {
+  padding: 20rpx;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 30rpx;
+}
+
+.title {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #333;
+}
+
+.config-section,
+.action-section,
+.logs-section,
+.tips-section {
+  background-color: white;
+  border-radius: 10rpx;
+  padding: 20rpx;
+  margin-bottom: 20rpx;
+  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #333;
+  display: block;
+  margin-bottom: 20rpx;
+  border-bottom: 2rpx solid #eee;
+  padding-bottom: 10rpx;
+}
+
+.config-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15rpx;
+}
+
+.label {
+  font-size: 28rpx;
+  color: #666;
+  margin-right: 20rpx;
+  min-width: 160rpx;
+}
+
+.value {
+  font-size: 28rpx;
+  color: #333;
+  font-weight: bold;
+}
+
+.template-list {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.template-id {
+  font-size: 24rpx;
+  color: #007aff;
+  background-color: #f0f8ff;
+  padding: 8rpx 12rpx;
+  border-radius: 6rpx;
+  margin-bottom: 8rpx;
+  word-break: break-all;
+}
+
+.test-btn {
+  margin-bottom: 20rpx;
+  border-radius: 8rpx;
+  font-size: 28rpx;
+}
+
+.test-btn:last-child {
+  margin-bottom: 0;
+}
+
+.logs-container {
+  height: 400rpx;
+  border: 2rpx solid #eee;
+  border-radius: 8rpx;
+  padding: 15rpx;
+  background-color: #fafafa;
+}
+
+.log-item {
+  margin-bottom: 10rpx;
+  padding: 8rpx 12rpx;
+  background-color: white;
+  border-radius: 6rpx;
+  border-left: 4rpx solid #007aff;
+}
+
+.log-text {
+  font-size: 24rpx;
+  color: #333;
+  line-height: 1.4;
+  word-break: break-all;
+}
+
+.log-text.placeholder {
+  color: #999;
+  font-style: italic;
+}
+
+.tip-item {
+  margin-bottom: 15rpx;
+}
+
+.tip-text {
+  font-size: 26rpx;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* 日志中的状态图标颜色 - 通过JS动态添加class实现 */
+.log-item.success {
+  border-left-color: #52c41a;
+}
+
+.log-item.error {
+  border-left-color: #ff4d4f;
+}
+
+.log-item.warning {
+  border-left-color: #faad14;
+}
+
+.log-item.loading {
+  border-left-color: #1890ff;
+}

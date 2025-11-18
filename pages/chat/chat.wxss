@@ -1,0 +1,11 @@
+/* 聊天列表样式 */
+.contact-item { display:flex; align-items:center; padding: 22rpx; margin-bottom: 18rpx; }
+.avatar { width: 92rpx; height: 92rpx; border-radius: 24rpx; background: #f5f5f5; display:flex; align-items:center; justify-content:center; font-size: 44rpx; margin-right: 20rpx; box-shadow: 0 8rpx 16rpx rgba(0,0,0,0.05); }
+.info { flex:1; }
+.top { display:flex; align-items:center; justify-content:space-between; }
+.name { font-size: 30rpx; font-weight: 700; }
+.time { font-size: 22rpx; color:#999; }
+.bottom { display:flex; align-items:center; justify-content:space-between; margin-top: 6rpx; }
+.last { color:#666; font-size: 26rpx; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; max-width: 480rpx; }
+.badge { min-width: 28rpx; height: 28rpx; padding: 0 8rpx; background: #ff4d4f; color:#fff; font-size: 20rpx; border-radius: 28rpx; line-height:28rpx; text-align:center; }
+.fab { position: fixed; right: 40rpx; bottom: 180rpx; width: 100rpx; height: 100rpx; border-radius: 50%; background:#1677ff; color:#fff; font-size: 60rpx; line-height: 100rpx; text-align:center; box-shadow: 0 16rpx 30rpx rgba(22,119,255,0.35); }

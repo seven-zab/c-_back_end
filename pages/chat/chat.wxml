@@ -1,0 +1,19 @@
+<view class="container">
+  <block wx:for="{{contacts}}" wx:key="*this">
+    <view class="contact-item card" bindtap="goChat" data-id="{{item._id || item.id}}">
+      <view class="avatar">{{item.avatar}}</view>
+      <view class="info">
+        <view class="top">
+          <text class="name">{{item.name}}</text>
+          <text class="time">{{item.time}}</text>
+        </view>
+        <view class="bottom">
+          <text class="last">{{item.lastMessage}}</text>
+          <view wx:if="{{item.unread>0}}" class="badge">{{item.unread}}</view>
+        </view>
+      </view>
+    </view>
+  </block>
+  <button class="fab" bindtap="goAdd">＋</button>
+  <view class="tabbar-placeholder"></view>
+</view>

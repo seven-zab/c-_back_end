@@ -1,0 +1,17 @@
+<view class="container">
+  <view class="card" style="padding: 24rpx;">
+    <view class="form-item">
+      <text class="label">联系人姓名</text>
+      <input class="input" placeholder="如：王老师" value="{{name}}" bindinput="onInput" data-field="name"/>
+    </view>
+    <view class="form-item">
+      <text class="label">联系电话</text>
+      <input class="input" placeholder="手机号/微信" value="{{phone}}" bindinput="onInput" data-field="phone"/>
+    </view>
+    <view class="form-item">
+      <text class="label">备注/简介</text>
+      <input class="input" placeholder="选填" value="{{desc}}" bindinput="onInput" data-field="desc"/>
+    </view>
+    <button class="submit" bindtap="onSubmit">添加</button>
+  </view>
+</view>

@@ -1,0 +1,43 @@
+<!--pages/debug/debug.wxml-->
+<view class="container">
+  <view class="header">
+    <text class="title">登录状态调试</text>
+    <text class="subtitle">{{debugInfo.timestamp}}</text>
+  </view>
+
+  <view class="debug-section">
+    <view class="section-title">存储中的用户信息</view>
+    <view class="info-box">
+      <text class="info-text">{{debugInfo.storageUser}}</text>
+    </view>
+  </view>
+
+  <view class="debug-section">
+    <view class="section-title">全局状态中的用户信息</view>
+    <view class="info-box">
+      <text class="info-text">{{debugInfo.globalUser}}</text>
+    </view>
+  </view>
+
+  <view class="debug-section">
+    <view class="section-title">UserState.getCurrentUser()</view>
+    <view class="info-box">
+      <text class="info-text">{{debugInfo.currentUser}}</text>
+    </view>
+  </view>
+
+  <view class="debug-section">
+    <view class="section-title">UserState.isLoggedIn()</view>
+    <view class="info-box {{debugInfo.isLoggedIn ? 'success' : 'error'}}">
+      <text class="info-text">{{debugInfo.isLoggedInText}}</text>
+    </view>
+  </view>
+
+  <view class="button-group">
+    <button class="debug-btn" bindtap="refreshDebugInfo">刷新信息</button>
+    <button class="debug-btn danger" bindtap="clearLogin">清除登录</button>
+    <button class="debug-btn warning" bindtap="clearTestUser">清除测试用户</button>
+    <button class="debug-btn" bindtap="testApplyTask">测试申请任务</button>
+    <button class="debug-btn warning" bindtap="goToDatabase">数据库初始化</button>
+  </view>
+</view>

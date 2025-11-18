@@ -1,0 +1,34 @@
+<!--pages/test-permission/test-permission.wxml-->
+<view class="container">
+  <view class="header">
+    <text class="title">权限系统测试</text>
+    <button class="retry-btn" bindtap="onRetryTests" disabled="{{loading}}">
+      {{loading ? '测试中...' : '重新测试'}}
+    </button>
+  </view>
+
+  <view class="test-results" wx:if="{{testResults.length > 0}}">
+    <view class="test-item" wx:for="{{testResults}}" wx:key="index">
+      <view class="test-header">
+        <text class="test-name">{{item.name}}</text>
+        <text class="test-status {{item.success ? 'success' : 'error'}}">
+          {{item.success ? '✓' : '✗'}}
+        </text>
+      </view>
+      <text class="test-message">{{item.message}}</text>
+    </view>
+  </view>
+
+  <view class="loading" wx:if="{{loading}}">
+    <text>正在运行测试...</text>
+  </view>
+
+  <view class="instructions">
+    <text class="instruction-title">测试说明：</text>
+    <text class="instruction-text">1. 初始化管理员用户权限</text>
+    <text class="instruction-text">2. 获取当前用户权限信息</text>
+    <text class="instruction-text">3. 测试权限申请功能</text>
+    <text class="instruction-text">4. 获取权限申请列表</text>
+    <text class="instruction-text">5. 测试权限申请审核功能</text>
+  </view>
+</view>

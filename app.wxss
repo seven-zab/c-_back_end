@@ -1,0 +1,166 @@
+/* 全局主题美化增强 - 按钮与浮动按钮、基础卡片阴影等 */
+
+/* 浮动操作按钮（用于各列表页发布、聊天页添加等 .fab） */
+.fab {
+  position: fixed;
+  right: 32rpx;
+  bottom: 120rpx;
+  width: 112rpx;
+  height: 112rpx;
+  line-height: 112rpx;
+  text-align: center;
+  border-radius: 999rpx;
+  color: #fff;
+  font-size: 48rpx;
+  font-weight: 600;
+  background: linear-gradient(135deg, #4F46E5, #06B6D4);
+  box-shadow: 0 16rpx 36rpx rgba(79, 70, 229, 0.28);
+  z-index: 99;
+}
+.fab::after { border: none; }
+
+/* 主要操作按钮（如：发布需求、发送、联系TA、登录等） */
+button.primary,
+.primary-btn,
+button.submit,
+button.send,
+.btn,
+button[type="primary"] {
+  background: linear-gradient(135deg, #3B82F6, #06B6D4);
+  color: #fff;
+  border: none;
+  border-radius: 999rpx;
+  padding: 22rpx 36rpx;
+  font-size: 30rpx;
+  font-weight: 600;
+  box-shadow: 0 12rpx 28rpx rgba(59, 130, 246, 0.28);
+}
+button.primary::after,
+.primary-btn::after,
+button.submit::after,
+button.send::after,
+.btn::after,
+button[type="primary"]::after { border: none; }
+
+/* 次要按钮（如：转发），保持简洁但有层次 */
+button.secondary {
+  background: #fff;
+  color: #3B82F6;
+  border: 2rpx solid #E5E7EB;
+  border-radius: 999rpx;
+  padding: 20rpx 34rpx;
+  font-size: 28rpx;
+  font-weight: 600;
+  box-shadow: 0 8rpx 16rpx rgba(0,0,0,0.04);
+}
+button.secondary::after { border: none; }
+
+/* 按钮行内间距优化：相邻按钮左右间距统一 */
+button + button { margin-left: 20rpx; }
+
+/* 输入条里的发送按钮紧凑一些 */
+.input-bar button.send,
+.input-bar .btn {
+  padding: 16rpx 26rpx;
+  font-size: 28rpx;
+  box-shadow: 0 8rpx 18rpx rgba(59, 130, 246, 0.22);
+}
+
+/* 基础卡片样式，可用于列表/容器统一阴影与圆角（如已有.card 会继承） */
+.card,
+.card-like {
+  background: #fff;
+  border-radius: 16rpx;
+  box-shadow: 0 10rpx 24rpx rgba(0,0,0,0.06);
+}
+
+/* 输入类组件的统一圆角与阴影（不覆盖页面已定制的颜色） */
+.input, .textarea, .picker, .ipt {
+  border-radius: 14rpx;
+  box-shadow: 0 8rpx 16rpx rgba(0,0,0,0.04);
+}
+
+/* 全局样式 */
+page {
+  background: #f7f8fa;
+  color: #1f1f1f;
+}
+
+/* 主题色和通用工具类 */
+:root {
+  --primary: #1677ff;
+  --secondary: #2f54eb;
+  --success: #52c41a;
+  --warning: #faad14;
+  --danger: #ff4d4f;
+  --text-secondary: #666;
+  --muted: #999;
+  --radius: 14rpx;
+  --shadow: 0 12rpx 24rpx rgba(0,0,0,0.06);
+}
+
+.container {
+  padding: 24rpx 28rpx 120rpx; /* 预留底部tabbar空间 */
+}
+
+.card {
+  background: #fff;
+  border-radius: 20rpx;
+  box-shadow: var(--shadow);
+}
+
+.shadow-sm { box-shadow: 0 8rpx 16rpx rgba(0,0,0,0.05); }
+.shadow-md { box-shadow: 0 12rpx 24rpx rgba(0,0,0,0.07); }
+
+.flex { display: flex; }
+.flex-center { display:flex; align-items:center; justify-content:center; }
+.space-between { display:flex; align-items:center; justify-content:space-between; }
+.text-muted { color: var(--muted); }
+
+/* 自定义tabbar占位 */
+.tabbar-placeholder { height: 120rpx; }
+/* 细节增强工具类 */
+.title-lg { font-size: 34rpx; font-weight: 700; }
+.subtitle { font-size: 26rpx; color: var(--text-secondary); }
+.divider { height: 2rpx; background: #eee; margin: 16rpx 0; border-radius: 2rpx; }
+ .pressable { transition: transform .12s ease, box-shadow .12s ease; }
+ .pressable:active { transform: scale(0.98); box-shadow: 0 8rpx 16rpx rgba(0,0,0,0.05); }
+
+ /* 玻璃态卡片与芯片（全局可用） */
+ .glass-card { background: rgba(255,255,255,0.92); backdrop-filter: saturate(180%) blur(10px); box-shadow: 0 12rpx 28rpx rgba(0,0,0,0.08); border-radius: 18rpx; }
+ .chip { display:inline-block; padding: 8rpx 14rpx; border-radius: 999rpx; font-size: 22rpx; color:#555; background:#f5f7ff; border: 2rpx solid #e6f0ff; margin: 6rpx 10rpx 0 0; }
+ .chip.primary { background:#f0f5ff; color:#1677ff; border-color: #d6e4ff; }
+ .chip.success { background:#f6ffed; color:#52c41a; border-color: #b7eb8f; }
+ .chip.warning { background:#fff7e6; color:#faad14; border-color: #ffd591; }
+ .chip.danger { background:#fff1f0; color:#ff4d4f; border-color: #ffa39e; }
+
+/* 全局大字版样式 */
+.large-font text,
+.large-font .text {
+  font-size: 32rpx !important;
+}
+
+.large-font button {
+  font-size: 32rpx !important;
+  padding: 24rpx 40rpx !important;
+}
+
+.large-font .title-lg {
+  font-size: 40rpx !important;
+}
+
+.large-font .subtitle {
+  font-size: 30rpx !important;
+}
+
+.large-font .chip {
+  font-size: 26rpx !important;
+  padding: 10rpx 16rpx !important;
+}
+
+.large-font .fab {
+  width: 128rpx !important;
+  height: 128rpx !important;
+  line-height: 128rpx !important;
+  font-size: 56rpx !important;
+}

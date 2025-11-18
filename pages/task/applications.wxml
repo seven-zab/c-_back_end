@@ -1,0 +1,71 @@
+<view class="container">
+  <view class="header">
+    <text class="title">任务申请管理</text>
+    <text class="subtitle">待审批的任务申请</text>
+  </view>
+
+  <view wx:if="{{loading}}" class="loading">
+    <text>加载中...</text>
+  </view>
+
+  <view wx:elif="{{applications.length === 0}}" class="empty">
+    <text class="empty-icon">📋</text>
+    <text class="empty-text">暂无待审批申请</text>
+    <text class="empty-desc">当有人申请您发布的任务时，会在这里显示</text>
+  </view>
+
+  <view wx:else class="applications-list">
+    <view 
+      wx:for="{{applications}}" 
+      wx:key="_id" 
+      class="application-item"
+    >
+      <view class="application-header">
+        <view class="applicant-info">
+          <image 
+            class="applicant-avatar" 
+            src="{{item.applicantAvatar || '/images/default-avatar.svg'}}"
+            mode="aspectFill"
+          />
+          <view class="applicant-details">
+            <text class="applicant-name">{{item.applicantName}}</text>
+            <text class="apply-time">{{item.createdAt}}</text>
+          </view>
+        </view>
+        <view class="status-badge pending">待审批</view>
+      </view>
+
+      <view class="task-info">
+        <text class="task-title">{{item.demandTitle}}</text>
+        <text class="task-content" wx:if="{{item.demandContent}}">{{item.demandContent}}</text>
+        <text class="task-location" wx:if="{{item.location}}">📍 {{item.location}}</text>
+      </view>
+
+      <view class="action-buttons">
+        <button 
+          class="btn btn-detail" 
+          bindtap="viewApplicationDetail"
+          data-application="{{item}}"
+        >
+          查看详情
+        </button>
+        <button 
+          class="btn btn-reject" 
+          bindtap="rejectApplication"
+          data-application-id="{{item._id}}"
+          data-demand-title="{{item.demandTitle}}"
+        >
+          拒绝
+        </button>
+        <button 
+          class="btn btn-approve" 
+          bindtap="approveApplication"
+          data-application-id="{{item._id}}"
+          data-demand-title="{{item.demandTitle}}"
+        >
+          批准
+        </button>
+      </view>
+    </view>
+  </view>
+</view>

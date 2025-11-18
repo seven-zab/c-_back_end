@@ -1,0 +1,180 @@
+.container {
+  padding: 20rpx;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+}
+
+.header {
+  background: white;
+  padding: 30rpx;
+  border-radius: 20rpx;
+  margin-bottom: 20rpx;
+  text-align: center;
+}
+
+.title {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #333;
+  display: block;
+  margin-bottom: 10rpx;
+}
+
+.subtitle {
+  font-size: 28rpx;
+  color: #666;
+}
+
+.loading {
+  text-align: center;
+  padding: 100rpx 0;
+  color: #999;
+}
+
+.empty {
+  text-align: center;
+  padding: 100rpx 40rpx;
+  background: white;
+  border-radius: 20rpx;
+}
+
+.empty-icon {
+  font-size: 80rpx;
+  display: block;
+  margin-bottom: 20rpx;
+}
+
+.empty-text {
+  font-size: 32rpx;
+  color: #333;
+  display: block;
+  margin-bottom: 10rpx;
+}
+
+.empty-desc {
+  font-size: 26rpx;
+  color: #999;
+}
+
+.applications-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20rpx;
+}
+
+.application-item {
+  background: white;
+  border-radius: 20rpx;
+  padding: 30rpx;
+  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.1);
+}
+
+.application-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+
+.applicant-info {
+  display: flex;
+  align-items: center;
+  gap: 20rpx;
+}
+
+.applicant-avatar {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+}
+
+.applicant-details {
+  display: flex;
+  flex-direction: column;
+  gap: 5rpx;
+}
+
+.applicant-name {
+  font-size: 30rpx;
+  font-weight: bold;
+  color: #333;
+}
+
+.apply-time {
+  font-size: 24rpx;
+  color: #999;
+}
+
+.status-badge {
+  padding: 8rpx 16rpx;
+  border-radius: 20rpx;
+  font-size: 24rpx;
+  font-weight: bold;
+}
+
+.status-badge.pending {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.task-info {
+  margin-bottom: 30rpx;
+}
+
+.task-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #333;
+  display: block;
+  margin-bottom: 10rpx;
+}
+
+.task-content {
+  font-size: 28rpx;
+  color: #666;
+  display: block;
+  margin-bottom: 10rpx;
+  line-height: 1.5;
+}
+
+.task-location {
+  font-size: 26rpx;
+  color: #007aff;
+  display: block;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 20rpx;
+  justify-content: flex-end;
+}
+
+.btn {
+  padding: 16rpx 32rpx;
+  border-radius: 30rpx;
+  font-size: 28rpx;
+  font-weight: bold;
+  border: none;
+  min-width: 120rpx;
+}
+
+.btn-detail {
+  background-color: #f8f9fa;
+  color: #6c757d;
+}
+
+.btn-reject {
+  background-color: #dc3545;
+  color: white;
+}
+
+.btn-approve {
+  background-color: #28a745;
+  color: white;
+}
+
+.btn:active {
+  opacity: 0.8;
+  transform: scale(0.98);
+}

@@ -1,0 +1,98 @@
+/* pages/debug/debug.wxss */
+.container {
+  padding: 20rpx;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 40rpx;
+}
+
+.title {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #333;
+  display: block;
+  margin-bottom: 10rpx;
+}
+
+.subtitle {
+  font-size: 24rpx;
+  color: #666;
+}
+
+.debug-section {
+  margin-bottom: 30rpx;
+}
+
+.section-title {
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10rpx;
+  display: block;
+}
+
+.info-box {
+  background-color: #fff;
+  border-radius: 10rpx;
+  padding: 20rpx;
+  border: 2rpx solid #e0e0e0;
+  min-height: 80rpx;
+  display: flex;
+  align-items: center;
+}
+
+.info-box.success {
+  border-color: #4caf50;
+  background-color: #f1f8e9;
+}
+
+.info-box.error {
+  border-color: #f44336;
+  background-color: #ffebee;
+}
+
+.info-text {
+  font-size: 24rpx;
+  color: #333;
+  word-break: break-all;
+  line-height: 1.5;
+}
+
+.button-group {
+  margin-top: 40rpx;
+  display: flex;
+  flex-direction: column;
+  gap: 20rpx;
+}
+
+.debug-btn {
+  height: 80rpx;
+  line-height: 80rpx;
+  border-radius: 10rpx;
+  font-size: 28rpx;
+  background-color: #fff;
+  border: 2rpx solid #e0e0e0;
+  color: #333;
+}
+
+.debug-btn.primary {
+  background-color: #2196f3;
+  border-color: #2196f3;
+  color: #fff;
+}
+
+.debug-btn.danger {
+  background-color: #f44336;
+  border-color: #f44336;
+  color: #fff;
+}
+
+.debug-btn.warning {
+  background-color: #ff9800;
+  border-color: #ff9800;
+  color: #fff;
+}

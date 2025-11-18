@@ -1,1 +1,0 @@
-/usr/bin/c++ -g CMakeFiles/tests_basic.dir/tests/test_basic.cpp.o -o tests_basic  libmycore.a 

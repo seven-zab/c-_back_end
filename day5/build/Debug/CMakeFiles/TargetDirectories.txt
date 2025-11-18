@@ -1,5 +1,0 @@
-/mnt/e/trae_owd/project_wx/day5/build/Debug/CMakeFiles/mycore.dir
-/mnt/e/trae_owd/project_wx/day5/build/Debug/CMakeFiles/app.dir
-/mnt/e/trae_owd/project_wx/day5/build/Debug/CMakeFiles/tests_basic.dir
-/mnt/e/trae_owd/project_wx/day5/build/Debug/CMakeFiles/edit_cache.dir
-/mnt/e/trae_owd/project_wx/day5/build/Debug/CMakeFiles/rebuild_cache.dir

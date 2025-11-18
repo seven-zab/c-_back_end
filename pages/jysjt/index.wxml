@@ -1,0 +1,42 @@
+<view class="container">
+  <view wx:if="{{list.length===0}}" class="empty card" bindtap="goCreate">
+    <view class="empty-icon">📝</view>
+    <view class="empty-title">暂无需求</view>
+    <view class="empty-sub">点击或底部 + 按钮发布你的第一个需求</view>
+  </view>
+
+ <block wx:for="{{list}}" wx:key="*this">
+   <view class="demand-item card" bindtap="goDetail" data-id="{{item._id || item.id}}">
+      <!-- 顶部标题 -->
+      <view class="title">{{item.title}}</view>
+      
+      <!-- 中部需求和要求 -->
+      <view class="content-section">
+        <view class="section-item" wx:if="{{item.content}}">
+          <text class="section-label">需求</text>
+          <text class="section-text">{{item.content}}</text>
+        </view>
+        <view class="section-item" wx:if="{{item.requirement || (item.skills && item.skills.length) || item.eduLevel}}">
+          <text class="section-label">要求</text>
+          <text class="section-text">
+            {{(item.requirement || '') + (item.eduLevel ? ' · 学历：' + item.eduLevel : '') + (item.skills && item.skills.length ? ' · 技能：' + item.skills.join('、') : '')}}
+          </text>
+        </view>
+      </view>
+      
+      <!-- 底部发布人信息和地区 -->
+      <view class="footer-info">
+        <view class="publisher-info" wx:if="{{item.contact}}">
+          <image class="avatar" wx:if="{{item.avatarUrl || item.avatar}}" src="{{item.avatarUrl || item.avatar}}" mode="aspectFill"></image>
+          <text class="avatar-placeholder" wx:else>👤</text>
+          <text class="publisher-name">{{item.contact}}</text>
+        </view>
+        <view class="location-info">
+          <text class="location-text">{{item.regionStr || item.county}}{{(item.detailAddress || item.address) ? ' · ' + (item.detailAddress || item.address) : ''}}</text>
+        </view>
+      </view>
+    </view>
+  </block>
+
+  <button class="fab" bindtap="goCreate">＋</button>
+</view>

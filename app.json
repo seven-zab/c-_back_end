@@ -1,0 +1,60 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/webview/index",
+    "pages/chat/chat",
+    "pages/chat/detail",
+    "pages/chat/add",
+    "pages/service/index",
+    "pages/service/robot",
+    "pages/service/human",
+    "pages/mine/mine",
+    "pages/mine/auth",
+    "pages/mine/wechat-login",
+    "pages/mine/faq",
+    "pages/qxt/index",
+    "pages/njb/index",
+    "pages/jysjt/index",
+    "pages/demand/create",
+    "pages/demand/detail",
+    "pages/article/detail",
+    "pages/report/report",
+    "pages/test-subscribe/test-subscribe",
+    "pages/test-message/test-message",
+    "pages/task/list",
+    "pages/task/detail",
+    "pages/task/applications",
+    "pages/task/timeline",
+    "pages/test-task/test-task",
+    "pages/test-database/test-database",
+    "pages/test-init-db/test-init-db",
+    "pages/test-db-status/test-db-status",
+    "pages/debug/debug",
+    "pages/test-task-flow/test-task-flow",
+    "pages/permission-management/permission-management",
+    "pages/test-permission/test-permission"
+  ],
+  "window": {
+    "navigationBarTitleText": "校企助手",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#f7f8fa",
+    "backgroundTextStyle": "light"
+  },
+  "style": "v2",
+  "cloud": true,
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "custom": true,
+    "color": "#666666",
+    "selectedColor": "#1677ff",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "white",
+    "list": [
+      { "pagePath": "pages/index/index", "text": "首页" },
+      { "pagePath": "pages/chat/chat", "text": "聊天" },
+      { "pagePath": "pages/service/index", "text": "客服" },
+      { "pagePath": "pages/mine/mine", "text": "我的" }
+    ]
+  }
+}

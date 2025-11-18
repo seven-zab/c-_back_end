@@ -1,0 +1,37 @@
+/* 会话详情样式 */
+.chat-detail { padding-bottom: 180rpx; }
+.msg-list { height: calc(100vh - 200rpx); }
+.msg-item { display:flex; align-items:flex-end; margin: 16rpx 0; }
+.msg-item .avatar { width: 64rpx; height: 64rpx; border-radius: 12rpx; background:#f5f5f5; display:flex; align-items:center; justify-content:center; font-size: 36rpx; margin: 0 12rpx; }
+.msg-item .bubble { max-width: 70%; padding: 16rpx 20rpx; border-radius: 16rpx; background:#fff; box-shadow: var(--shadow); }
+.msg-item .bubble::after { content:''; position:absolute; width: 0; height: 0; border: 12rpx solid transparent; }
+.msg-item.bot .bubble { position: relative; }
+.msg-item.bot .bubble::after { left: -8rpx; bottom: 12rpx; border-right-color: #fff; }
+.msg-item .content { display:block; font-size: 28rpx; color:#1f1f1f; }
+.msg-item .time { display:block; font-size: 20rpx; color:#999; margin-top: 6rpx; text-align:right; }
+.msg-item.sent { flex-direction: row-reverse; }
+.msg-item.sent .bubble { position: relative; background: #1677ff; color:#fff; }
+.msg-item.sent .bubble::after { right: -8rpx; bottom: 12rpx; border-left-color: #1677ff; }
+.msg-item.sent .content { color:#fff; }
+
+/* 统一美化输入条与发送按钮（覆盖/增强原样式） */
+.input-bar {
+  position: fixed;
+  left: 24rpx;
+  right: 24rpx;
+  bottom: 24rpx;
+  background: #fff;
+  border-radius: 999rpx;
+  padding: 12rpx;
+  box-shadow: 0 12rpx 24rpx rgba(0,0,0,0.06);
+  z-index: 9;
+}
+.input {
+  flex: 1;
+  background: #f7f8fa;
+  border-radius: 999rpx;
+  padding: 16rpx 22rpx;
+  margin-right: 12rpx;
+}
+.send { min-width: 140rpx; }
+.send { background:#1677ff; color:#fff; padding: 0 30rpx; height: 72rpx; line-height:72rpx; border-radius: 999rpx; }

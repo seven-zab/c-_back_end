@@ -1,0 +1,65 @@
+<!--pages/permission-management/permission-management.wxml-->
+<view class="container">
+  <view class="header">
+    <text class="title">权限申请管理</text>
+  </view>
+
+  <view class="content" wx:if="{{!loading}}">
+    <view class="application-list" wx:if="{{applications.length > 0}}">
+      <view class="application-item" wx:for="{{applications}}" wx:key="_id">
+        <view class="user-info">
+          <image class="avatar" src="{{item.userInfo.avatarUrl}}" mode="aspectFill"></image>
+          <view class="user-details">
+            <text class="nickname">{{item.userInfo.nickName}}</text>
+            <text class="openid">{{item.openid}}</text>
+          </view>
+        </view>
+        
+        <view class="application-info">
+          <view class="info-row">
+            <text class="label">申请权限：</text>
+            <text class="value permission-type">{{permissionNames[item.requestedPermission]}}</text>
+          </view>
+          <view class="info-row">
+            <text class="label">申请理由：</text>
+            <text class="value reason">{{item.reason}}</text>
+          </view>
+          <view class="info-row">
+            <text class="label">申请时间：</text>
+            <text class="value time">{{item.createdAt}}</text>
+          </view>
+        </view>
+
+        <view class="actions" wx:if="{{item.status === 'pending'}}">
+          <button class="action-btn approve-btn" 
+                  data-application-id="{{item._id}}" 
+                  data-action="approve"
+                  bindtap="reviewApplication">
+            通过
+          </button>
+          <button class="action-btn reject-btn" 
+                  data-application-id="{{item._id}}" 
+                  data-action="reject"
+                  bindtap="reviewApplication">
+            拒绝
+          </button>
+        </view>
+
+        <view class="status" wx:else>
+          <text class="status-text {{item.status}}">
+            {{item.status === 'approved' ? '已通过' : '已拒绝'}}
+          </text>
+          <text class="review-time">{{item.reviewedAt}}</text>
+        </view>
+      </view>
+    </view>
+
+    <view class="empty-state" wx:else>
+      <text class="empty-text">暂无权限申请</text>
+    </view>
+  </view>
+
+  <view class="loading" wx:if="{{loading}}">
+    <text>加载中...</text>
+  </view>
+</view>

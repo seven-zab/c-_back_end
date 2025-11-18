@@ -1,1 +1,0 @@
-/usr/bin/c++ -g -Og -Wall -Wextra CMakeFiles/demo_raii.dir/app/demo_raii.cpp.o -o demo_raii  libmycore.a 

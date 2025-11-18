@@ -1,0 +1,58 @@
+<view class="container">
+  <view class="card" style="padding: 28rpx;">
+    <view class="title-row">
+      <text class="title">{{item.title}}</text>
+    </view>
+
+    <!-- 新增：分类结构化展示 -->
+    <view class="section" wx:if="{{item.categoryL1 || item.categoryL2}}">
+      <view class="section-title">分类</view>
+      <view class="content">{{item.categoryL1}}{{item.categoryL2 ? ' - ' + item.categoryL2 : ''}}</view>
+    </view>
+
+    <view class="section">
+      <view class="section-title">需求</view>
+      <view class="content">{{item.content}}</view>
+    </view>
+
+    <view class="section">
+      <view class="section-title">联系人与方式</view>
+      <view class="content">{{item.contact}} · {{item.phone}}</view>
+    </view>
+
+    <!-- 新增：要求结构化展示 -->
+    <view class="section" wx:if="{{item.eduLevel || item.timeStart || (item.skills && item.skills.length)}}">
+      <view class="section-title">要求</view>
+      <view class="content">
+        <view wx:if="{{item.eduLevel}}" class="chip primary">学历：{{item.eduLevel}}</view>
+        <view wx:if="{{item.timeStart || item.timeEnd}}" class="chip warning">时间：{{item.timeStart}}{{item.timeEnd ? ' 至 ' + item.timeEnd : ''}}</view>
+        <block wx:if="{{item.skills && item.skills.length}}">
+          <text class="chip success">技能：</text>
+          <block wx:for="{{item.skills}}" wx:key="*this">
+            <text class="chip">{{item}}</text>
+          </block>
+        </block>
+      </view>
+    </view>
+
+    <!-- 兼容旧 requirement 文本 -->
+    <view wx:if="{{item.requirement}}" class="section">
+      <view class="section-title">对帮助人员的要求（文本）</view>
+      <view class="content">{{item.requirement}}</view>
+    </view>
+  </view>
+  <view class="footer-row">
+    <view class="publisher" wx:if="{{item.contact}}">
+      <image class="avatar-img" wx:if="{{item.avatarUrl || item.avatar}}" src="{{item.avatarUrl || item.avatar}}" mode="aspectFill"></image>
+      <text class="avatar-fallback" wx:else>👤</text>
+      <text class="name">{{item.contact}}</text>
+    </view>
+    <view class="region">{{item.regionStr}}{{item.detailAddress ? ' · '+item.detailAddress : ''}}</view>
+  </view>
+  <view class="actions">
+    <button class="apply-task" bindtap="applyTask">申请接取任务</button>
+    <button class="primary" bindtap="contact">联系TA</button>
+    <button bindtap="share">转发</button>
+    <button class="debug-btn" bindtap="goToDebug">调试登录状态</button>
+  </view>
+</view>

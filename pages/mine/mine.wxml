@@ -1,0 +1,83 @@
+<view class="container mine {{largeFont ? 'large-font' : ''}}">
+  <view class="profile-section">
+    <block wx:if="{{user}}">
+      <image class="avatar-img" src="{{user.avatarUrl}}" mode="aspectFill" bindtap="changeAvatar"></image>
+      <text class="welcome">{{user.nickName}}</text>
+      
+      <!-- 任务功能区域 -->
+      <view class="task-section">
+        <view class="task-header" bindtap="goToTaskList">
+          <view class="task-info">
+            <text class="task-title">我的任务</text>
+            <text class="task-count" wx:if="{{taskCount > 0}}">{{taskCount}}个任务</text>
+            <text class="task-empty" wx:else>暂无任务</text>
+          </view>
+          <text class="task-arrow">></text>
+        </view>
+        
+        <!-- 新增：任务申请管理 -->
+        <view class="task-header" bindtap="goToApplicationManagement">
+          <view class="task-info">
+            <text class="task-title">任务申请管理</text>
+            <text class="task-count" wx:if="{{pendingApplications > 0}}">{{pendingApplications}}个待审批</text>
+            <text class="task-empty" wx:else>暂无申请</text>
+          </view>
+          <text class="task-arrow">></text>
+        </view>
+      </view>
+
+      <!-- 新增：权限管理区域 -->
+      <view class="permission-section">
+        <!-- 显示当前权限 -->
+        <view class="permission-status" wx:if="{{userPermission}}">
+          <text class="permission-label">当前身份：</text>
+          <text class="permission-value">{{userPermission.permissionName}}</text>
+        </view>
+        
+        <!-- 申请权限按钮 -->
+         <view class="permission-actions">
+           <button class="permission-btn apply-btn" bindtap="applyPermission">申请权限</button>
+           
+           <!-- 权限申请管理（仅管理员和村委可见） -->
+           <view class="task-header permission-management" 
+                 wx:if="{{userPermission && (userPermission.permission === 1 || userPermission.permission === 2)}}"
+                 bindtap="goToPermissionManagement">
+             <view class="task-info">
+               <text class="task-title">权限申请管理</text>
+               <text class="task-count" wx:if="{{permissionApplications > 0}}">{{permissionApplications}}个待审核</text>
+               <text class="task-empty" wx:else>暂无申请</text>
+             </view>
+             <text class="task-arrow">></text>
+           </view>
+         </view>
+      </view>
+
+      <!-- 已登录也可绑定手机号 -->
+      <button type="primary" bindtap="onGetProfile" class="primary-btn">更新微信资料（昵称/头像）</button>
+      <button open-type="getPhoneNumber" bindgetphonenumber="onGetPhoneNumber" class="primary-btn">绑定/更新手机号</button>
+      
+      <!-- 打印报表按钮 - 根据权限显示 -->
+      <button class="primary-btn report-btn" 
+              wx:if="{{userPermission && userPermission.permission >= 1 && userPermission.permission <= 3}}"
+              bindtap="printReport">打印报表</button>
+      
+      <button class="primary-btn" bindtap="requestSubscribe">订阅消息授权</button>
+      <navigator url="/pages/test-subscribe/test-subscribe" class="primary-btn test-btn" open-type="navigate">订阅消息测试</navigator>
+      <navigator url="/pages/test-message/test-message" class="primary-btn test-btn" open-type="navigate">新版消息测试</navigator>
+      <navigator url="/pages/test-task/test-task" class="primary-btn test-btn" open-type="navigate">任务功能测试</navigator>
+      <navigator url="/pages/test-permission/test-permission" class="primary-btn test-btn" open-type="navigate">权限系统测试</navigator>
+      <button class="primary-btn" bindtap="logout">退出登录</button>
+    </block>
+    <block wx:else>
+      <view class="avatar" bindtap="goAuth">👤</view>
+      <text class="welcome">您好，欢迎来到校企助手</text>
+      <button class="primary-btn" bindtap="onOneTapLogin">微信一键登录/注册</button>
+      <!-- 未登录时可直接手机号登录（保留在 auth 页） -->
+      <navigator url="/pages/mine/auth" class="primary-btn" open-type="navigate">手机号验证码登录</navigator>
+    </block>
+  </view>
+  <view class="footer-links">
+    <view class="faq" bindtap="goFaq">常见问题</view>
+  </view>
+  <view class="tabbar-placeholder"></view>
+</view>

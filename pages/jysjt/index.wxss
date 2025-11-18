@@ -1,0 +1,26 @@
+/* 技研实践厅列表美化 - 统一企需通样式 */
+/* 列表与空态样式 */
+.empty { text-align:center; padding: 60rpx 30rpx; }
+.empty-icon { font-size: 90rpx; }
+.empty-title { margin-top: 12rpx; font-size: 30rpx; font-weight: 600; }
+.empty-sub { color:#999; font-size: 24rpx; margin-top: 6rpx; }
+
+.demand-item { padding: 28rpx; margin-bottom: 20rpx; }
+.demand-item .title { font-size: 30rpx; font-weight: 600; }
+
+/* 中部内容分节 */
+.content-section { margin-top: 10rpx; display: flex; flex-direction: column; gap: 6rpx; }
+.section-item { padding: 6rpx 4rpx; }
+.section-label { color:#888; font-size: 24rpx; margin-right: 8rpx; }
+.section-text { color:#555; font-size: 26rpx; }
+
+/* 底部头像和地区 */
+.footer-info { margin-top: 16rpx; display:flex; justify-content: space-between; align-items:center; }
+.publisher-info { display:flex; align-items:center; gap: 10rpx; }
+.avatar { width: 44rpx; height: 44rpx; border-radius: 50%; background:#eee; }
+.avatar-placeholder { width: 44rpx; height: 44rpx; border-radius: 50%; background:#eee; display:flex; align-items:center; justify-content:center; }
+.publisher-name { font-size: 26rpx; color:#333; }
+.location-info { color:#666; font-size: 24rpx; }
+
+/* 浮动发布按钮 */
+.fab { position: fixed; right: 40rpx; bottom: 180rpx; width: 100rpx; height: 100rpx; border-radius: 50%; background:#1677ff; color:#fff; font-size: 60rpx; line-height: 100rpx; text-align:center; box-shadow: 0 16rpx 30rpx rgba(22,119,255,0.4); }

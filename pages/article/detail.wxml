@@ -1,0 +1,23 @@
+<view class="article-page">
+  <view class="article-card">
+    <view class="article-title">{{article.title}}</view>
+    <view class="article-meta">
+      <text class="source">来源：{{article.source}}</text>
+    </view>
+    <view class="article-cover" wx:if="{{article.cover}}">
+      <image src="{{article.cover}}" mode="widthFix"></image>
+    </view>
+    <rich-text class="article-content" nodes="{{article.contentHtml}}"></rich-text>
+    <view class="article-source">
+      <text>原文链接：</text>
+      <text class="link" selectable="true" user-select="true">{{article.sourceUrl}}</text>
+    </view>
+  </view>
+
+  <view class="action-bar">
+    <button class="btn-copy" bindtap="onCopyLink">复制原文链接</button>
+    <button class="btn-share" open-type="share">分享</button>
+  </view>
+
+  <view class="safe-area"></view>
+</view>

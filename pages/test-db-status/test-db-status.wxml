@@ -1,0 +1,15 @@
+<view class="container">
+  <view class="header">
+    <text class="title">数据库状态检查</text>
+  </view>
+  
+  <button class="btn" bindtap="initDatabase">初始化数据库</button>
+  
+  <view class="results">
+    <view wx:for="{{testResults}}" wx:key="collection" class="result-item">
+      <text class="collection-name">{{item.collection}}</text>
+      <text class="status">{{item.status}}</text>
+      <text wx:if="{{item.error}}" class="error">{{item.error}}</text>
+    </view>
+  </view>
+</view>

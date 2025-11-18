@@ -1,0 +1,12 @@
+<view class="container">
+  <block wx:for="{{staffs}}" wx:key="id">
+    <view class="staff-item card" bindtap="startChat" data-id="{{item.id}}">
+      <view class="avatar">{{item.avatar}}</view>
+      <view class="info">
+        <view class="name">{{item.name}}</view>
+        <view class="desc">{{item.title}}</view>
+      </view>
+    </view>
+  </block>
+  <view class="tabbar-placeholder"></view>
+</view>

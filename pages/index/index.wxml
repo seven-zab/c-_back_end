@@ -1,0 +1,55 @@
+<view class="container {{largeFont ? 'large-font' : ''}}">
+  <!-- 顶部渐变 Hero 区 -->
+  <view class="hero">
+    <view class="card banner-card">
+    <swiper class="banner-swiper" indicator-dots="true" autoplay="true" circular="true" interval="3500" duration="500">
+      <block wx:for="{{banners}}" wx:key="id">
+        <swiper-item bindtap="onBannerTap" data-id="{{item.id}}">
+          <image class="banner-img" src="{{item.img}}" mode="aspectFill"></image>
+          <view class="banner-mask"></view>
+          <view class="banner-title">{{item.title}}</view>
+        </swiper-item>
+      </block>
+    </swiper>
+    <!-- 轮播图下方搜索栏 + 最新发布提示 -->
+    <view class="search-area">
+      <view class="search-bar card glass" bindtap="onSearchTap">
+        <text class="search-icon">🔎</text>
+        <input class="search-input" placeholder="搜索需求关键词，如：AI建模 / 农技指导 / 小程序开发" confirm-type="search" disabled></input>
+      </view>
+      <view class="latest-tip">
+        <text class="tip-dot"></text>
+        <text class="tip-text">最新发布：{{latestDemand}}</text>
+      </view>
+    </view>
+    </view>
+  </view>
+
+  <!-- 三大模块 -->
+  <view class="module-grid">
+    <view class="module-item card shadow-md" bindtap="goQXT">
+      <view class="module-icon qxt">🏢</view>
+      <view class="module-title">企需通</view>
+      <view class="module-desc">企业发布需求</view>
+    </view>
+    <view class="module-item card shadow-md" bindtap="goNJB">
+      <view class="module-icon njb">🌾</view>
+      <view class="module-title">农践帮</view>
+      <view class="module-desc">果农发布需求</view>
+    </view>
+    <view class="module-item card shadow-md" bindtap="goJYSJT">
+      <view class="module-icon jysjt">🔬</view>
+      <view class="module-title">技研实践厅</view>
+      <view class="module-desc">科技类帮助</view>
+    </view>
+  </view>
+
+  <!-- 大字版切换按钮 -->
+  <view class="font-toggle-container bottom">
+    <button class="font-toggle-btn" bindtap="toggleFontSize">
+      {{largeFont ? '普通版' : '大字版'}}
+    </button>
+  </view>
+
+  <view class="tabbar-placeholder"></view>
+</view>

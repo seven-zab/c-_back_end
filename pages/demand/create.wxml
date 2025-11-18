@@ -1,0 +1,91 @@
+<view class="container">
+  <view class="card" style="padding: 24rpx;">
+    <view class="form-item">
+      <text class="label">需求类型</text>
+      <picker range="{{types}}" value="{{typeIndex}}" bindchange="onTypeChange">
+        <view class="picker">{{types[typeIndex]}}</view>
+      </picker>
+    </view>
+
+    <!-- 新增：大类选择 -->
+    <view class="form-item">
+      <text class="label">需求大类</text>
+      <picker range="{{categories}}" value="{{categoryIndex}}" bindchange="onCategoryChange">
+        <view class="picker">{{categories[categoryIndex]}}</view>
+      </picker>
+    </view>
+
+    <!-- 新增：具体项选择 -->
+    <view class="form-item">
+      <text class="label">具体需求</text>
+      <picker range="{{subs}}" value="{{subIndex}}" bindchange="onSubChange">
+        <view class="picker">{{subs[subIndex]}}</view>
+      </picker>
+    </view>
+
+    <!-- 新增：详细需求（选填） -->
+    <view class="form-item">
+      <text class="label">详细需求（选填）</text>
+      <textarea class="textarea" placeholder="请补充更为详细的需求说明（可选）" value="{{content}}" bindinput="onInput" data-field="content"/>
+    </view>
+
+    <view class="form-item">
+      <text class="label">需求标题</text>
+      <input class="input" placeholder="一句话概述需求" value="{{title}}" bindinput="onInput" data-field="title"/>
+    </view>
+
+    <view class="form-item">
+      <text class="label">联系人</text>
+      <input class="input" placeholder="姓名" value="{{contact}}" bindinput="onInput" data-field="contact"/>
+    </view>
+    <view class="form-item">
+      <text class="label">联系方式</text>
+      <input class="input" placeholder="手机号/微信号" value="{{phone}}" bindinput="onInput" data-field="phone"/>
+    </view>
+
+    <view class="form-item">
+      <text class="label">所在地区</text>
+      <picker mode="region" value="{{region}}" bindchange="onRegionChange">
+        <view class="picker">{{region && region.length? region.join(' ') : '请选择省/市/区'}}</view>
+      </picker>
+    </view>
+    <view class="form-item">
+      <text class="label">详细地址</text>
+      <input class="input" placeholder="如：XX镇XX村XX号" value="{{detailAddress}}" bindinput="onInput" data-field="detailAddress"/>
+    </view>
+
+    <!-- 新增：对帮助人员的要求（选项化） -->
+    <view class="form-item">
+      <text class="label">学历要求</text>
+      <picker range="{{eduOptions}}" value="{{eduIndex}}" bindchange="onEduChange">
+        <view class="picker">{{eduOptions[eduIndex]}}</view>
+      </picker>
+    </view>
+
+    <view class="form-item">
+      <text class="label">时间</text>
+      <view class="row">
+        <picker mode="date" value="{{startDate}}" bindchange="onStartDateChange">
+          <view class="picker">{{startDate || '开始日期'}}</view>
+        </picker>
+        <picker mode="date" value="{{endDate}}" bindchange="onEndDateChange">
+          <view class="picker">{{endDate || '结束日期'}}</view>
+        </picker>
+      </view>
+    </view>
+
+    <view class="form-item">
+      <text class="label">技能</text>
+      <checkbox-group bindchange="onSkillsChange">
+        <view class="skill-grid">
+          <label wx:for="{{skillOptions}}" wx:key="*this" class="skill-item {{skillsSelected.indexOf(item) >= 0 ? 'active' : ''}}">
+            <checkbox value="{{item}}" checked="{{skillsSelected.indexOf(item) >= 0}}" class="hidden-checkbox"/>
+            <text class="skill-text">{{item}}</text>
+          </label>
+        </view>
+      </checkbox-group>
+    </view>
+
+    <button class="submit" bindtap="onSubmit">发布需求</button>
+  </view>
+</view>

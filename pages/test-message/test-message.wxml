@@ -1,0 +1,52 @@
+<view class="container">
+  <view class="header">
+    <text class="title">订阅消息测试</text>
+  </view>
+
+  <view class="button-group">
+    <button 
+      class="test-btn" 
+      type="primary" 
+      bindtap="testRequestAuth"
+      disabled="{{loading}}"
+    >
+      测试请求授权
+    </button>
+
+    <button 
+      class="test-btn" 
+      type="default" 
+      bindtap="testSendMessage"
+      disabled="{{loading}}"
+    >
+      测试发送消息
+    </button>
+
+    <button 
+      class="test-btn" 
+      type="warn" 
+      bindtap="testFullFlow"
+      disabled="{{loading}}"
+    >
+      测试完整流程
+    </button>
+
+    <button 
+      class="test-btn clear-btn" 
+      size="mini" 
+      bindtap="clearResult"
+      disabled="{{loading}}"
+    >
+      清空结果
+    </button>
+  </view>
+
+  <view class="result-section" wx:if="{{result}}">
+    <view class="result-title">测试结果：</view>
+    <view class="result-content">{{result}}</view>
+  </view>
+
+  <view class="loading" wx:if="{{loading}}">
+    <text>处理中...</text>
+  </view>
+</view>

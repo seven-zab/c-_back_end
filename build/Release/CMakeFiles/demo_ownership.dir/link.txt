@@ -1,1 +1,0 @@
-/usr/bin/c++ -O2 -DNDEBUG CMakeFiles/demo_ownership.dir/app/demo_ownership.cpp.o -o demo_ownership  libmycore.a 

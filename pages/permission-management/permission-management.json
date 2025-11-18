@@ -1,0 +1,6 @@
+{
+  "usingComponents": {},
+  "navigationBarTitleText": "权限申请管理",
+  "enablePullDownRefresh": true,
+  "backgroundColor": "#f5f5f5"
+}
